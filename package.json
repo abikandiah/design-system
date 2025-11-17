@@ -13,7 +13,7 @@
 		"build:css": "postcss src/styles.css -o dist/tailwind.css",
 		"build": "npm run clean && npm run build:js && npm run build:css",
 		"clean": "rm -rf dist",
-		"publish:npm": "npm publish --access public",
+		"publish": "npm publish --access public",
 		"dev": "vite",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
