@@ -33,7 +33,7 @@
 				"./src/*"
 			],
 			"@ui/*": [
-				"./src/ui/*/index.ts"
+				"./src/components/*/index.ts"
 			]
 		}
 	},

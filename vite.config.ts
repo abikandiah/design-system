@@ -1,15 +1,16 @@
 /// <reference types="vitest/config" />
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from "vite-tsconfig-paths";
-
 import { defineConfig } from 'vite';
 import { resolve } from 'node:path'
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 // https://vite.dev/config/
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
 import { playwright } from '@vitest/browser-playwright';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+
+
 const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
@@ -18,6 +19,28 @@ export default defineConfig({
 		react(),
 		tsconfigPaths()
 	],
+	build: {
+		// Enable source maps for easier debugging in consuming projects
+		sourcemap: true,
+		// Specify the file where all built components will reside
+		lib: {
+			entry: resolve(dirname, 'src/index.ts'),
+			name: 'DesignSystem', // The global name for the UMD build
+			fileName: (format) => `design-system.${format}.js`, // Naming convention
+		},
+		rollupOptions: {
+			// 1. Mark external dependencies to prevent them from being bundled
+			external: ['react', 'react-dom', 'tailwindcss'],
+			output: {
+				// 2. Configure UMD/IIFE global variables for the externals
+				globals: {
+					react: 'React',
+					'react-dom': 'ReactDOM',
+					tailwindcss: 'tailwindcss',
+				},
+			},
+		},
+	},
 	test: {
 		projects: [{
 			extends: true,
@@ -40,10 +63,5 @@ export default defineConfig({
 				setupFiles: ['.storybook/vitest.setup.ts']
 			}
 		}]
-	},
-	resolve: {
-		alias: {
-			'@': resolve(__dirname, './src'),
-		},
 	}
 });
