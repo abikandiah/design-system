@@ -1,7 +1,6 @@
-import { withTV } from 'tailwind-variants'
 
 /** @type {import('tailwindcss').Config} */
-export default withTV({
+export default {
 	darkMode: ["class"],
 	content: [
 		'./index.html',
@@ -28,4 +27,5 @@ export default withTV({
 	safelist: [
 		'opac-white',
 	],
-})
+}
+
