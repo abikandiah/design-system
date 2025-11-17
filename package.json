@@ -1,6 +1,6 @@
 {
 	"name": "@abumble/design-system",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "dist/design-system.umd.js",
 	"module": "dist/design-system.es.js",
 	"types": "dist/index.d.ts",
