@@ -12,7 +12,7 @@
 		"build:js": "vite build && tsc -p tsconfig.build.json --emitDeclarationOnly",
 		"build": "npm run clean && npm run build:js",
 		"clean": "rm -rf dist",
-		"publish": "npm publish --access public",
+		"publish:npm": "npm publish --access public",
 		"dev": "vite",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
