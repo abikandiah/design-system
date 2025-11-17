@@ -13,7 +13,7 @@
 		"build:css": "postcss src/styles.css -o dist/tailwind.css",
 		"build": "npm run clean && npm run build:js && npm run build:css",
 		"clean": "rm -rf dist",
-		"publish:npm": "npm publish --access restricted",
+		"publish:npm": "npm publish --access public",
 		"dev": "vite",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
@@ -53,6 +53,7 @@
 		"eslint-plugin-react-refresh": "^0.4.24",
 		"eslint-plugin-storybook": "^10.0.7",
 		"globals": "^16.5.0",
+		"lucide-react": "^0.544.0",
 		"playwright": "^1.56.1",
 		"postcss": "^8.5.6",
 		"postcss-cli": "^11.0.1",
@@ -68,6 +69,7 @@
 		"vitest": "^4.0.9"
 	},
 	"peerDependencies": {
+		"lucide-react": ">=0.544.0",
 		"react": ">=19.0.0",
 		"react-dom": ">=19.0.0",
 		"tailwindcss": ">=4.0.0"

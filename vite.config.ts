@@ -30,7 +30,7 @@ export default defineConfig({
 		},
 		rollupOptions: {
 			// 1. Mark external dependencies to prevent them from being bundled
-			external: ['react', 'react-dom', 'tailwindcss'],
+			external: ['react', 'react-dom', 'tailwindcss', 'lucide-react'],
 			output: {
 				// 2. Configure UMD/IIFE global variables for the externals
 				globals: {
