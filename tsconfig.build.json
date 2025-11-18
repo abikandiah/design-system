@@ -6,7 +6,7 @@
         // allowing tsc to generate the .d.ts files.
         "noEmit": false, 
 
-        // 1. **MANDATORY FIX**: Enables generation of .d.ts files
+        // 1. Enables generation of .d.ts files
         "declaration": true,
         
         // 2. Specifies the directory where the compiled definitions should go
