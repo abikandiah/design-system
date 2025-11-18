@@ -112,7 +112,7 @@ export default defineConfig({
 				// Put all shared, automatically generated chunks 
 				// into a specific, non-polluting subdirectory to prevent naming 
 				// conflicts with entry files like Button.js.
-				chunkFileNames: '_chunks/[name].js',
+				chunkFileNames: 'shared/[name].js',
 
 				dir: 'dist',
 				format: 'es',
