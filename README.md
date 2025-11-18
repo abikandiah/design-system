@@ -1,4 +1,3 @@
-# React + TypeScript + Vite
-
+# PRIVATE
 A package to host common components and styles
--- PRIVATE --
+
