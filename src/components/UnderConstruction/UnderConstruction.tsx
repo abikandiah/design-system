@@ -1,5 +1,5 @@
 import Crane from "@/assets/crane.svg";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 
 
 function UnderConstruction() {

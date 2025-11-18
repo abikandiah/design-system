@@ -1,6 +1,6 @@
-import { colorWeights } from "@/lib/constants";
-import { cn } from "@/lib/utils";
-import type { onClickCallback } from "@/lib/types";
+import { colorWeights } from "@/constants/constants";
+import { cn } from "@/utils";
+import type { onClickCallback } from "@/types/types";
 import { CircleX, Info, Lightbulb, TriangleAlert, X } from "lucide-react";
 import { Button } from "../Button";
 import { Skeleton } from "../Skeleton";

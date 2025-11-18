@@ -10,103 +10,99 @@
 			"import": "./dist/index.js",
 			"types": "./dist/index.d.ts"
 		},
-		"./config": {
-			"import": "./dist/config.js",
-			"types": "./dist/config.d.ts"
-		},
-		"./styles.css": "./src/styles.css",
 		"./components/Banner": {
 			"import": "./dist/components/Banner.js",
-			"types": "./dist/components/Banner/Banner.d.ts"
+			"types": "./dist/components/Banner.d.ts"
 		},
 		"./components/Breadcrumb": {
 			"import": "./dist/components/Breadcrumb.js",
-			"types": "./dist/components/Breadcrumb/Breadcrumb.d.ts"
+			"types": "./dist/components/Breadcrumb.d.ts"
 		},
 		"./components/Button": {
 			"import": "./dist/components/Button.js",
-			"types": "./dist/components/Button/Button.d.ts"
+			"types": "./dist/components/Button.d.ts"
 		},
 		"./components/Card": {
 			"import": "./dist/components/Card.js",
-			"types": "./dist/components/Card/Card.d.ts"
+			"types": "./dist/components/Card.d.ts"
 		},
 		"./components/Carousel": {
 			"import": "./dist/components/Carousel.js",
-			"types": "./dist/components/Carousel/Carousel.d.ts"
+			"types": "./dist/components/Carousel.d.ts"
 		},
 		"./components/CodeDisplay": {
 			"import": "./dist/components/CodeDisplay.js",
-			"types": "./dist/components/CodeDisplay/CodeDisplay.d.ts"
+			"types": "./dist/components/CodeDisplay.d.ts"
 		},
 		"./components/Collapsible": {
 			"import": "./dist/components/Collapsible.js",
-			"types": "./dist/components/Collapsible/Collapsible.d.ts"
+			"types": "./dist/components/Collapsible.d.ts"
 		},
 		"./components/ContextMenu": {
 			"import": "./dist/components/ContextMenu.js",
-			"types": "./dist/components/ContextMenu/ContextMenu.d.ts"
+			"types": "./dist/components/ContextMenu.d.ts"
 		},
 		"./components/Empty": {
 			"import": "./dist/components/Empty.js",
-			"types": "./dist/components/Empty/Empty.d.ts"
+			"types": "./dist/components/Empty.d.ts"
 		},
 		"./components/Input": {
 			"import": "./dist/components/Input.js",
-			"types": "./dist/components/Input/Input.d.ts"
+			"types": "./dist/components/Input.d.ts"
 		},
 		"./components/List": {
 			"import": "./dist/components/List.js",
-			"types": "./dist/components/List/List.d.ts"
+			"types": "./dist/components/List.d.ts"
 		},
 		"./components/NotFound": {
 			"import": "./dist/components/NotFound.js",
-			"types": "./dist/components/NotFound/NotFound.d.ts"
+			"types": "./dist/components/NotFound.d.ts"
 		},
 		"./components/Popover": {
 			"import": "./dist/components/Popover.js",
-			"types": "./dist/components/Popover/Popover.d.ts"
+			"types": "./dist/components/Popover.d.ts"
 		},
 		"./components/Separator": {
 			"import": "./dist/components/Separator.js",
-			"types": "./dist/components/Separator/Separator.d.ts"
+			"types": "./dist/components/Separator.d.ts"
 		},
 		"./components/Sheet": {
 			"import": "./dist/components/Sheet.js",
-			"types": "./dist/components/Sheet/Sheet.d.ts"
+			"types": "./dist/components/Sheet.d.ts"
 		},
 		"./components/Sidebar": {
 			"import": "./dist/components/Sidebar.js",
-			"types": "./dist/components/Sidebar/Sidebar.d.ts"
+			"types": "./dist/components/Sidebar.d.ts"
 		},
 		"./components/Skeleton": {
 			"import": "./dist/components/Skeleton.js",
-			"types": "./dist/components/Skeleton/Skeleton.d.ts"
+			"types": "./dist/components/Skeleton.d.ts"
 		},
 		"./components/Tooltip": {
 			"import": "./dist/components/Tooltip.js",
-			"types": "./dist/components/Tooltip/Tooltip.d.ts"
+			"types": "./dist/components/Tooltip.d.ts"
 		},
 		"./components/UnderConstruction": {
 			"import": "./dist/components/UnderConstruction.js",
-			"types": "./dist/components/UnderConstruction/UnderConstruction.d.ts"
+			"types": "./dist/components/UnderConstruction.d.ts"
 		},
-		"./lib/utils": {
-			"import": "./dist/lib/utils.js",
-			"types": "./dist/lib/utils.d.ts"
+		"./utils": {
+			"import": "./dist/utils.js",
+			"types": "./dist/utils.d.ts"
 		},
-		"./lib/constants": {
-			"import": "./dist/lib/constants.js",
-			"types": "./dist/lib/constants.d.ts"
+		"./constants": {
+			"import": "./dist/constants.js",
+			"types": "./dist/constants.d.ts"
 		},
-		"./lib/types": {
-			"import": "./dist/lib/types.js",
-			"types": "./dist/lib/types.d.ts"
+		"./types": {
+			"import": "./dist/types.js",
+			"types": "./dist/types.d.ts"
 		},
 		"./hooks/use-mobile": {
 			"import": "./dist/hooks/use-mobile.js",
 			"types": "./dist/hooks/use-mobile.d.ts"
-		}
+		},
+		"./styles.css": "./src/styles.css"
 	},
 	"scripts": {
 		"build:js": "vite build && tsc -p tsconfig.build.json --emitDeclarationOnly",
