@@ -40,9 +40,10 @@ export default defineConfig({
 					.map(file => {
 						const moduleName = path.relative('src', file)
 							.replace(path.extname(file), '') // Remove .ts
-							.replace(path.sep + 'index', ''); // Remove /index
-						// Key is the module name (e.g., 'Button', 'Card')
-						// Value is the path to the source file
+							// Remove ALL /index suffixes, regardless of nesting
+							.replace(path.sep + 'index', '');
+
+							// Key is the module name (e.g., 'Button', 'Card', 'use-mobile')
 						return [moduleName, file];
 					})
 			),

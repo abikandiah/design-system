@@ -1,21 +1,19 @@
 {
-      "extends": "./tsconfig.app.json", // Inherit all your base settings (target, jsx, etc.)
-      "compilerOptions": {
-        // --- OVERRIDE DEVELOPMENT/VITE SETTINGS ---
-        // Setting this to false overrides "noEmit: true" from the inherited config,
-        // allowing tsc to generate the .d.ts files.
-        "noEmit": false, 
-
-        // 1. Enables generation of .d.ts files
-        "declaration": true,
-        
-        // 2. Specifies the directory where the compiled definitions should go
-        "outDir": "./dist",
-        
-        // 3. (Optional but recommended) Generates source map files for declarations
-        "declarationMap": true
-      },
-      // Ensures only files within 'src' are included for the final definition compilation
-      "include": ["src/**/*"] 
-    }
-	
+	"extends": "./tsconfig.app.json", // Inherit all your base settings (target, jsx, etc.)
+	"compilerOptions": {
+		// --- OVERRIDE DEVELOPMENT/VITE SETTINGS ---
+		// Setting this to false overrides "noEmit: true" from the inherited config,
+		// allowing tsc to generate the .d.ts files.
+		"noEmit": false,
+		// 1. Enables generation of .d.ts files
+		"declaration": true,
+		// 2. Specifies the directory where the compiled definitions should go
+		"outDir": "./dist",
+		// 3. (Optional but recommended) Generates source map files for declarations
+		"declarationMap": true
+	},
+	// Ensures only files within 'src' are included for the final definition compilation
+	"include": [
+		"src/**/*"
+	]
+}
