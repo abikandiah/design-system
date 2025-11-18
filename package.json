@@ -99,6 +99,10 @@
 			"import": "./dist/lib/constants.js",
 			"types": "./dist/lib/constants.d.ts"
 		},
+		"./lib/types": {
+			"import": "./dist/lib/types.js",
+			"types": "./dist/lib/types.d.ts"
+		},
 		"./hooks/use-mobile": {
 			"import": "./dist/hooks/use-mobile.js",
 			"types": "./dist/hooks/use-mobile.d.ts"
