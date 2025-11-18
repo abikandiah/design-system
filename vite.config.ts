@@ -14,38 +14,42 @@ import { playwright } from '@vitest/browser-playwright';
 const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
 // --- 1. Define all entries using a single, robust glob pattern ---
-// This pattern captures all component and hook entry points (all `index.ts` files 
-// that are *not* the core utility/root files).
 const componentAndModuleEntries = Object.fromEntries(
-    glob.sync('src/**/index.ts', { 
-        // Exclude the root entry file and the utility/type entry files, as these 
-        // will be added manually below. This avoids duplicating inputs and ensures 
-        // predictable naming for these core files.
-        ignore: [
-            'src/index.ts', 
-            'src/types/index.ts', 
-            'src/constants/index.ts', 
-            'src/utils/index.ts'
-        ] 
-    })
-    .map(file => {
-        const moduleName = path.relative('src', file)
-            .replace(path.extname(file), '') // Remove .ts
-            // Remove the '/index' suffix to get the final published name (e.g., 'components/Button')
-            .replace(path.sep + 'index', ''); 
-        return [moduleName, file];
-    })
+	// Find all index.ts files inside nested folders (components/, hooks/, etc.)
+	glob.sync('src/**/index.ts', {
+		// Exclude the root index.ts file
+		ignore: ['src/index.ts']
+	})
+		.map(file => {
+			// Calculate the module name used for the output file path.
+			// 1. Remove the 'src/' prefix (path.relative('src', file)).
+			// 2. Remove the '/index.ts' suffix.
+			const moduleName = path.relative('src', file)
+				.replace(path.extname(file), '') // Remove .ts
+				.replace(path.sep + 'index', ''); // Remove the final '/index'
+
+			// This should result in names like:
+			// 'components/Button'
+			// 'hooks/use-mobile'
+			// 'types'
+			// 'constants'
+			// 'utils'
+
+			return [moduleName, file];
+		})
 );
 
-// Combine the glob results with all the essential, hand-defined library entry points
+// We no longer need to manually define the core entry points, 
+// as they should be picked up by the glob:
+// 'types' -> src/types/index.ts
+// 'constants' -> src/constants/index.ts
+// 'utils' -> src/utils/index.ts
 const finalInput = {
-    ...componentAndModuleEntries,
-    
-    // Core entry points needed for package.json exports
-    'index': path.resolve(dirname, 'src/index.ts'), 
-    'types': path.resolve(dirname, 'src/types/index.ts'),
-    'constants': path.resolve(dirname, 'src/constants/index.ts'),
-    'utils': path.resolve(dirname, 'src/utils/index.ts'), 
+	...componentAndModuleEntries,
+
+	// We only explicitly define the root entry, which is the dummy file.
+	// This is the only file that must resolve to './dist/index.js'
+	'index': path.resolve(dirname, 'src/index.ts'),
 };
 
 // --------------------------------------------------------------------------------------
@@ -105,8 +109,10 @@ export default defineConfig({
 				exports: 'named',
 				entryFileNames: '[name].js',
 
-				// Suppress content hashing on shared chunks
-				chunkFileNames: '[name].js',
+				// Put all shared, automatically generated chunks 
+				// into a specific, non-polluting subdirectory to prevent naming 
+				// conflicts with entry files like Button.js.
+				chunkFileNames: '_chunks/[name].js',
 
 				dir: 'dist',
 				format: 'es',

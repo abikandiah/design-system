@@ -1,19 +1,29 @@
 {
 	"extends": "./tsconfig.app.json", // Inherit all your base settings (target, jsx, etc.)
 	"compilerOptions": {
-		// --- OVERRIDE DEVELOPMENT/VITE SETTINGS ---
-		// Setting this to false overrides "noEmit: true" from the inherited config,
-		// allowing tsc to generate the .d.ts files.
-		"noEmit": false,
-		// 1. Enables generation of .d.ts files
-		"declaration": true,
-		// 2. Specifies the directory where the compiled definitions should go
-		"outDir": "./dist",
-		// 3. (Optional but recommended) Generates source map files for declarations
-		"declarationMap": true
+        // --- Core Settings for Declaration Files ---
+        "declaration": true,
+        "declarationMap": true,
+        "emitDeclarationOnly": true,
+        "noEmit": false,
+
+        // CRITICAL FIX: These two lines tell TSC to take the file structure 
+        // starting at 'src' and replicate it exactly into the 'dist' folder.
+        // This ensures dist/components/Banner.d.ts is generated.
+        "rootDir": "./src",
+        "outDir": "./dist",
+
 	},
-	// Ensures only files within 'src' are included for the final definition compilation
-	"include": [
-		"src/**/*"
-	]
+    // Only compile files within the src directory
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.stories.ts",
+        "**/*.stories.tsx",
+        "**/*.test.ts",
+        "**/*.test.tsx"
+    ]
 }
