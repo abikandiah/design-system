@@ -108,6 +108,7 @@
 		"build:js": "vite build && tsc -p tsconfig.build.json --emitDeclarationOnly",
 		"build": "npm run clean && npm run build:js",
 		"clean": "rm -rf dist",
+		"prepublishOnly": "npm run build",
 		"publish:npm": "npm publish --access public",
 		"dev": "vite",
 		"storybook": "storybook dev -p 6006",
