@@ -15,12 +15,12 @@ export function getRandomIntUpTo(max: number) {
 	return Math.floor(Math.random() * (max + 1));
 }
 
-export function stringToBoolean(str: string | null): boolean {
+export function stringToBoolean(str: string | null | undefined): boolean {
 	if (!str) return false;
 	return ["true", "1", "yes"].includes(str.trim().toLowerCase());
 }
 
-export function booleanToString(bool: boolean | null): string {
+export function booleanToString(bool: boolean | null | undefined): string {
 	if (!bool) return false.toString();
 	return bool.toString();
 }
