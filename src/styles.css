@@ -203,9 +203,9 @@ code {
 	--banner-alert: oklch(0.97 0.02 25);
 	--banner-alert-foreground: oklch(0.45 0.18 25);
 	--banner-alert-border: oklch(0.65 0.2 25);
-	--banner-note: oklch(0.967 0.001 286.375);
-	--banner-note-foreground: oklch(0.45 0.02 286);
-	--banner-note-border: oklch(0.85 0.01 286);
+	--banner-note: oklch(0.93 0.05 130);
+	--banner-note-foreground: oklch(0.48 0.15 130);
+	--banner-note-border: oklch(0.85 0.08 130);
 }
 
 .dark {
@@ -251,19 +251,12 @@ code {
 	--banner-alert: oklch(0.28 0.08 25);
 	--banner-alert-foreground: oklch(0.88 0.1 25);
 	--banner-alert-border: oklch(0.5 0.15 25);
-	--banner-note: oklch(0.274 0.006 286.033);
-	--banner-note-foreground: oklch(0.705 0.015 286.067);
-	--banner-note-border: oklch(0.4 0.02 286);
+	--banner-note: oklch(0.22 0.06 130);
+	--banner-note-foreground: oklch(0.85 0.08 130);
+	--banner-note-border: oklch(0.5 0.12 130);
 }
 
 /* Banner: style by type so colors work when package is imported in other projects */
-[data-banner-type] {
-	padding: 0.75rem;
-	border: 0;
-	border-left-width: 4px;
-	border-left-style: solid;
-}
-
 [data-banner-type="warning"] {
 	background: var(--banner-warning);
 	color: var(--banner-warning-foreground);

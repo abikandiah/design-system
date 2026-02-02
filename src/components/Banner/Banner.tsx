@@ -35,7 +35,7 @@ function Banner({ type, title, loading, hideIcon, onClose, children, className, 
 	return (
 		<div
 			data-banner-type={type}
-			className={cn(className)}
+			className={cn('p-3 border-l-4 rounded', className)}
 			role="alert"
 			{...props}
 		>
