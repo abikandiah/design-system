@@ -259,6 +259,7 @@ code {
 /* Banner: style by type so colors work when package is imported in other projects */
 [data-banner-type] {
 	padding: 0.75rem;
+	border: 0;
 	border-left-width: 4px;
 	border-left-style: solid;
 	border-radius: var(--radius);
@@ -266,22 +267,22 @@ code {
 [data-banner-type="warning"] {
 	background: var(--banner-warning);
 	color: var(--banner-warning-foreground);
-	border-color: var(--banner-warning-border);
+	border-left-color: var(--banner-warning-border);
 }
 [data-banner-type="info"] {
 	background: var(--banner-info);
 	color: var(--banner-info-foreground);
-	border-color: var(--banner-info-border);
+	border-left-color: var(--banner-info-border);
 }
 [data-banner-type="alert"] {
 	background: var(--banner-alert);
 	color: var(--banner-alert-foreground);
-	border-color: var(--banner-alert-border);
+	border-left-color: var(--banner-alert-border);
 }
 [data-banner-type="note"] {
 	background: var(--banner-note);
 	color: var(--banner-note-foreground);
-	border-color: var(--banner-note-border);
+	border-left-color: var(--banner-note-border);
 }
 
 @theme inline {
