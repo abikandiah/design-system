@@ -193,17 +193,17 @@ code {
 	--sidebar-accent-foreground: oklch(0.21 0.006 285.885);
 	--sidebar-border: oklch(0.92 0.004 286.32);
 	--sidebar-ring: oklch(0.871 0.006 286.286);
-	/* Banner: Tailwind blue/green/yellow/red (light: bg 50, text 800, border 400) */
-	--banner-info: oklch(0.97 0.014 247.896);
+	/* Banner: Tailwind blue/green/yellow/red (light: bg 100, text 800, border 400) */
+	--banner-info: oklch(0.931 0.038 253.71);
 	--banner-info-foreground: oklch(0.45 0.13 264.052);
 	--banner-info-border: oklch(0.704 0.165 259.815);
-	--banner-note: oklch(0.982 0.018 155.826);
+	--banner-note: oklch(0.927 0.048 142.48);
 	--banner-note-foreground: oklch(0.448 0.119 151.328);
 	--banner-note-border: oklch(0.792 0.209 151.711);
-	--banner-warning: oklch(0.984 0.046 102.211);
+	--banner-warning: oklch(0.937 0.065 99.01);
 	--banner-warning-foreground: oklch(0.577 0.245 66.928);
 	--banner-warning-border: oklch(0.828 0.189 84.429);
-	--banner-alert: oklch(0.977 0.014 17.38);
+	--banner-alert: oklch(0.936 0.031 17.72);
 	--banner-alert-foreground: oklch(0.396 0.141 25.723);
 	--banner-alert-border: oklch(0.577 0.245 27.325);
 }
@@ -260,7 +260,7 @@ code {
 [data-banner-type] {
 	border-left-width: 4px;
 	border-left-style: solid;
-	border-radius: var(--radius);
+	border-radius: 0.25rem;
 	padding: 0.75rem;
 }
 
