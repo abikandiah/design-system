@@ -25,7 +25,8 @@
 				"dbaeumer.vscode-eslint",
 				"esbenp.prettier-vscode",
 				"bradlc.vscode-tailwindcss",
-				"storybook.storybook-vscode"
+				"storybook.storybook-vscode",
+				"donjayamanne.githistory"
 			],
 			"settings": {
 				"editor.defaultFormatter": "esbenp.prettier-vscode",
