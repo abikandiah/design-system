@@ -13,13 +13,13 @@ const bannerType = {
 
 type TBannerType = (typeof bannerType)[keyof typeof bannerType];
 
+/** Banner colors and layout are in design-system styles.css via [data-banner-type]. Type → color: info=blue, note=green, warning=yellow, alert=red. */
 const icons: Record<TBannerType, React.ComponentType> = {
 	[bannerType.Info]: Info,
 	[bannerType.Note]: Lightbulb,
 	[bannerType.Warning]: TriangleAlert,
 	[bannerType.Alert]: CircleX
 };
-
 
 interface BannerProps extends React.ComponentProps<"div"> {
 	type: TBannerType;
@@ -35,23 +35,23 @@ function Banner({ type, title, loading, hideIcon, onClose, children, className, 
 	return (
 		<div
 			data-banner-type={type}
-			className={cn('p-3 border-l-4 rounded', className)}
+			className={cn(className)}
 			role="alert"
 			{...props}
 		>
-			<div className={`flex items-start`}>
+			<div className="flex items-start">
 				{loading ?
 					<BannerLoadingContent />
 					:
 					<>
 						{!hideIcon &&
-							<div className={`flex-shrink-0 mr-3`}>
+							<div className="flex-shrink-0 mr-3">
 								<Icon />
 							</div>
 						}
 						<section>
 							{title && (
-								<p className={`font-bold`}>
+								<p className="font-bold">
 									{title}
 								</p>
 							)}
