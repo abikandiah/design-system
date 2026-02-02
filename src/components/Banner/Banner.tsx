@@ -1,10 +1,8 @@
-import { colorWeights } from "@/constants/constants";
-import { cn } from "@/utils";
 import type { onClickCallback } from "@/types/types";
+import { cn } from "@/utils";
 import { CircleX, Info, Lightbulb, TriangleAlert, X } from "lucide-react";
 import { Button } from "../Button";
 import { Skeleton } from "../Skeleton";
-
 
 const bannerType = {
 	Info: 'info',
@@ -22,13 +20,6 @@ const icons: Record<TBannerType, React.ComponentType> = {
 	[bannerType.Alert]: CircleX
 };
 
-const styleColor: Record<TBannerType, string> = {
-	[bannerType.Info]: 'blue',
-	[bannerType.Note]: 'green',
-	[bannerType.Warning]: 'yellow',
-	[bannerType.Alert]: 'red',
-};
-
 
 interface BannerProps extends React.ComponentProps<"div"> {
 	type: TBannerType;
@@ -39,14 +30,12 @@ interface BannerProps extends React.ComponentProps<"div"> {
 }
 
 function Banner({ type, title, loading, hideIcon, onClose, children, className, ...props }: BannerProps) {
-
-	const color = styleColor[type] || styleColor.note;
-	const containerClass = `bg-${color}-${colorWeights[0]} text-${color}-${colorWeights[1]} border-${color}-${colorWeights[2]}`;
-	const Icon = icons[type] || icons.note;
+	const Icon = icons[type] ?? icons[bannerType.Note];
 
 	return (
 		<div
-			className={cn(`p-3 border-l-4 rounded`, containerClass, className)}
+			data-banner-type={type}
+			className={cn(className)}
 			role="alert"
 			{...props}
 		>
@@ -119,5 +108,5 @@ function CloseButton(props: React.ComponentProps<"button">) {
 	);
 }
 
-export { Banner, MessageBanner, bannerType, type TBannerType };
+export { Banner, bannerType, MessageBanner, type TBannerType };
 

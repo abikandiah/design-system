@@ -1,0 +1,40 @@
+{
+	"name": "Design System",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+	"forwardPorts": [
+		5173,
+		6006
+	],
+	"portsAttributes": {
+		"5173": {
+			"label": "Vite",
+			"onAutoForward": "notify"
+		},
+		"6006": {
+			"label": "Storybook",
+			"onAutoForward": "notify"
+		}
+	},
+	"postCreateCommand": "npm ci && npx playwright install chromium",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"bradlc.vscode-tailwindcss",
+				"storybook.storybook-vscode"
+			],
+			"settings": {
+				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.fixAll.eslint": "explicit"
+				}
+			}
+		}
+	},
+	"remoteUser": "node"
+}
