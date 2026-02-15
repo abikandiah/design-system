@@ -86,6 +86,70 @@
 			"import": "./dist/components/UnderConstruction.js",
 			"types": "./dist/components/UnderConstruction/UnderConstruction.d.ts"
 		},
+		"./components/Badge": {
+			"import": "./dist/components/Badge.js",
+			"types": "./dist/components/Badge/Badge.d.ts"
+		},
+		"./components/Label": {
+			"import": "./dist/components/Label.js",
+			"types": "./dist/components/Label/Label.d.ts"
+		},
+		"./components/Checkbox": {
+			"import": "./dist/components/Checkbox.js",
+			"types": "./dist/components/Checkbox/Checkbox.d.ts"
+		},
+		"./components/Select": {
+			"import": "./dist/components/Select.js",
+			"types": "./dist/components/Select/Select.d.ts"
+		},
+		"./components/Textarea": {
+			"import": "./dist/components/Textarea.js",
+			"types": "./dist/components/Textarea/Textarea.d.ts"
+		},
+		"./components/Table": {
+			"import": "./dist/components/Table.js",
+			"types": "./dist/components/Table/Table.d.ts"
+		},
+		"./components/PageHeader": {
+			"import": "./dist/components/PageHeader.js",
+			"types": "./dist/components/PageHeader/PageHeader.d.ts"
+		},
+		"./components/Dialog": {
+			"import": "./dist/components/Dialog.js",
+			"types": "./dist/components/Dialog/Dialog.d.ts"
+		},
+		"./components/FieldsTable": {
+			"import": "./dist/components/FieldsTable.js",
+			"types": "./dist/components/FieldsTable/FieldsTable.d.ts"
+		},
+		"./components/ConfirmDeleteDialog": {
+			"import": "./dist/components/ConfirmDeleteDialog.js",
+			"types": "./dist/components/ConfirmDeleteDialog/ConfirmDeleteDialog.d.ts"
+		},
+		"./components/ActionsPopover": {
+			"import": "./dist/components/ActionsPopover.js",
+			"types": "./dist/components/ActionsPopover/ActionsPopover.d.ts"
+		},
+		"./components/BackLink": {
+			"import": "./dist/components/BackLink.js",
+			"types": "./dist/components/BackLink/BackLink.d.ts"
+		},
+		"./components/BannerHeader": {
+			"import": "./dist/components/BannerHeader.js",
+			"types": "./dist/components/BannerHeader/BannerHeader.d.ts"
+		},
+		"./components/DelayedLoadingFallback": {
+			"import": "./dist/components/DelayedLoadingFallback.js",
+			"types": "./dist/components/DelayedLoadingFallback/DelayedLoadingFallback.d.ts"
+		},
+		"./components/Toaster": {
+			"import": "./dist/components/Toaster.js",
+			"types": "./dist/components/Toaster/Toaster.d.ts"
+		},
+		"./hooks/use-delayed-loading": {
+			"import": "./dist/use-delayed-loading.js",
+			"types": "./dist/hooks/use-delayed-loading/use-delayed-loading.d.ts"
+		},
 		"./utils": {
 			"import": "./dist/utils.js",
 			"types": "./dist/utils/utils.d.ts"
@@ -168,9 +232,11 @@
 		"vitest": "^4.0.9"
 	},
 	"peerDependencies": {
+		"@radix-ui/react-checkbox": "^1.3.2",
 		"@radix-ui/react-collapsible": "^1.1.12",
 		"@radix-ui/react-context-menu": "^2.2.16",
 		"@radix-ui/react-dialog": "^1.1.15",
+		"@radix-ui/react-label": "^2.1.6",
 		"@radix-ui/react-popover": "^1.1.15",
 		"@radix-ui/react-separator": "^1.1.7",
 		"@radix-ui/react-slot": "^1.2.3",
@@ -182,6 +248,7 @@
 		"lucide-react": ">=0.544.0",
 		"react": ">=19.0.0",
 		"react-dom": ">=19.0.0",
+		"sonner": "^2.0.0",
 		"tailwind-merge": "^3.0.2",
 		"tailwindcss": ">=4.0.0"
 	},

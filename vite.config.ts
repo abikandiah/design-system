@@ -94,6 +94,7 @@ export default defineConfig({
 				'class-variance-authority',
 				'embla-carousel',
 				'embla-carousel-react',
+				'sonner',
 				/^@radix-ui\/.*/,      // Externalize all Radix UI packages
 				/^@floating-ui\/.*/,   // Externalize all Floating UI packages
 				/^react-remove-scroll\/.*/, // Externalize packages with deep paths
