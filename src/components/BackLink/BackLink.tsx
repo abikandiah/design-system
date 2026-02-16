@@ -1,6 +1,6 @@
 import { cn } from '@/utils'
-import { Slot } from '@radix-ui/react-slot'
 import { ChevronLeft } from 'lucide-react'
+import * as React from 'react'
 
 export interface BackLinkProps extends React.ComponentProps<'a'> {
 	/** Link text, e.g. "Back to properties". */
@@ -8,6 +8,13 @@ export interface BackLinkProps extends React.ComponentProps<'a'> {
 	/** If true, renders the provided child element as the link. Use with router Link components. */
 	asChild?: boolean
 }
+
+const slotContent = (label: string) => (
+	<>
+		<ChevronLeft className="size-4 shrink-0" aria-hidden />
+		<span>{label}</span>
+	</>
+)
 
 /**
  * Back link with chevron icon. Router-agnostic via asChild pattern.
@@ -26,21 +33,32 @@ export function BackLink({
 	label,
 	asChild = false,
 	className,
+	children,
 	...props
 }: BackLinkProps) {
-	const Comp = asChild ? Slot : 'a'
+	const slotClassName = cn(
+		'inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground',
+		className,
+	)
+
+	if (asChild) {
+		const child = React.Children.only(children) as React.ReactElement
+		const mergedProps = {
+			'data-slot': 'back-link',
+			className: slotClassName,
+			...props,
+			children: slotContent(label),
+		}
+		return React.cloneElement(child, mergedProps)
+	}
 
 	return (
-		<Comp
+		<a
 			data-slot="back-link"
-			className={cn(
-				'inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground',
-				className,
-			)}
+			className={slotClassName}
 			{...props}
 		>
-			<ChevronLeft className="size-4 shrink-0" aria-hidden />
-			<span>{label}</span>
-		</Comp>
+			{slotContent(label)}
+		</a>
 	)
 }
