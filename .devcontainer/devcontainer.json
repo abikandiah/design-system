@@ -18,15 +18,17 @@
 			"onAutoForward": "notify"
 		}
 	},
-	"postCreateCommand": "npm ci && npx playwright install chromium",
+	"postCreateCommand": "npm ci && npx playwright install chromium && curl -fsSL https://claude.ai/install.sh | bash",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"dbaeumer.vscode-eslint",
 				"esbenp.prettier-vscode",
+				"redhat.vscode-yaml",
 				"bradlc.vscode-tailwindcss",
 				"storybook.storybook-vscode",
-				"donjayamanne.githistory"
+				"donjayamanne.githistory",
+				"anthropic.claude-code"
 			],
 			"settings": {
 				"editor.defaultFormatter": "esbenp.prettier-vscode",
