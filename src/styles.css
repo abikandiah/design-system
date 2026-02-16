@@ -206,6 +206,11 @@ code {
 	--banner-alert: oklch(0.936 0.031 17.72);
 	--banner-alert-foreground: oklch(0.396 0.141 25.723);
 	--banner-alert-border: oklch(0.577 0.245 27.325);
+	/* Badge: success = green, warning = amber */
+	--badge-success: oklch(0.53 0.15 145);
+	--badge-success-foreground: oklch(1 0 0);
+	--badge-warning: oklch(0.75 0.18 75);
+	--badge-warning-foreground: oklch(1 0 0);
 	/* Checkbox: light = olive checked, gray border unchecked; dark = matching contrast */
 	--checkbox-checked: oklch(0.78 0.15 125);
 	--checkbox-checked-foreground: oklch(1 0 0);
@@ -259,6 +264,10 @@ code {
 	--banner-alert: oklch(0.293 0.084 27.325);
 	--banner-alert-foreground: oklch(0.969 0.071 27.325);
 	--banner-alert-border: oklch(0.577 0.245 27.325);
+	--badge-success: oklch(0.48 0.15 150);
+	--badge-success-foreground: oklch(1 0 0);
+	--badge-warning: oklch(0.65 0.18 75);
+	--badge-warning-foreground: oklch(1 0 0);
 	--checkbox-checked: oklch(0.72 0.17 130);
 	--checkbox-checked-foreground: oklch(1 0 0);
 	--checkbox-unchecked-bg: oklch(0.28 0.01 260);

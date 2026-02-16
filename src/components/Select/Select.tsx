@@ -5,12 +5,10 @@ import { cn } from '@/utils'
 /** Native select styled to match design-system Input (form control). */
 export function Select({
 	className,
-	ref,
 	...props
-}: React.ComponentProps<'select'> & { ref?: React.Ref<HTMLSelectElement> }) {
+}: React.ComponentProps<'select'>) {
 	return (
 		<select
-			ref={ref}
 			data-slot="select"
 			className={cn(
 				'flex h-9 w-full rounded border border-input bg-transparent px-3 py-1 text-sm shadow-xs transition-colors outline-none',

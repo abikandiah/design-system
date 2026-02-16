@@ -1,0 +1,108 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Theming/Design Tokens" />
+
+# Design Tokens & Theming
+
+This design system uses **OKLCh CSS custom properties** for all colors, with automatic dark mode support via the `.dark` class.
+
+## How Theming Works
+
+1. All tokens are defined in `src/styles.css` as CSS custom properties on `:root` (light) and `.dark` (dark)
+2. Tailwind CSS 4 maps these to utility classes via `@theme inline` block
+3. Components use semantic color names (e.g. `bg-primary`, `text-muted-foreground`) rather than raw colors
+
+## Core Color Tokens
+
+| Token | Usage |
+|-------|-------|
+| `--background` / `--foreground` | Page background and default text |
+| `--card` / `--card-foreground` | Card surfaces |
+| `--popover` / `--popover-foreground` | Popover/dropdown surfaces |
+| `--primary` / `--primary-foreground` | Primary actions (buttons, links) |
+| `--secondary` / `--secondary-foreground` | Secondary actions |
+| `--muted` / `--muted-foreground` | Muted backgrounds and subdued text |
+| `--accent` / `--accent-foreground` | Accent highlights |
+| `--destructive` / `--destructive-foreground` | Destructive/error actions |
+
+## Border & Input Tokens
+
+| Token | Usage |
+|-------|-------|
+| `--border` | Default border color |
+| `--input` | Form input borders |
+| `--ring` | Focus ring color |
+
+## Sidebar Tokens
+
+| Token | Usage |
+|-------|-------|
+| `--sidebar` | Sidebar background |
+| `--sidebar-foreground` | Sidebar text |
+| `--sidebar-primary` / `--sidebar-primary-foreground` | Sidebar primary accent |
+| `--sidebar-accent` / `--sidebar-accent-foreground` | Sidebar hover/active states |
+| `--sidebar-border` | Sidebar border |
+| `--sidebar-ring` | Sidebar focus ring |
+
+## Banner Tokens
+
+Used by the `Banner` component via `data-banner-type` attribute:
+
+| Token | Type |
+|-------|------|
+| `--banner-info` / `--banner-info-foreground` / `--banner-info-border` | Info (blue) |
+| `--banner-note` / `--banner-note-foreground` / `--banner-note-border` | Note (green) |
+| `--banner-warning` / `--banner-warning-foreground` / `--banner-warning-border` | Warning (yellow) |
+| `--banner-alert` / `--banner-alert-foreground` / `--banner-alert-border` | Alert (red) |
+
+## Badge Tokens
+
+| Token | Usage |
+|-------|-------|
+| `--badge-success` / `--badge-success-foreground` | Success badge variant |
+| `--badge-warning` / `--badge-warning-foreground` | Warning badge variant |
+
+## Checkbox Tokens
+
+| Token | Usage |
+|-------|-------|
+| `--checkbox-checked` / `--checkbox-checked-foreground` | Checked state |
+| `--checkbox-unchecked-bg` / `--checkbox-unchecked-border` | Unchecked state |
+
+## Chart Tokens
+
+| Token | Usage |
+|-------|-------|
+| `--chart-1` through `--chart-5` | Chart/data visualization colors |
+
+## Radius Tokens
+
+| Token | Value |
+|-------|-------|
+| `--radius` | Base radius (`0.625rem`) |
+| `--radius-sm` | `calc(var(--radius) - 4px)` |
+| `--radius-md` | `calc(var(--radius) - 2px)` |
+| `--radius-lg` | `var(--radius)` |
+| `--radius-xl` | `calc(var(--radius) + 4px)` |
+
+## Customizing the Theme
+
+To customize the theme in your consuming application, override the CSS custom properties:
+
+```css
+:root {
+  --primary: oklch(0.5 0.2 260);
+  --primary-foreground: oklch(1 0 0);
+}
+
+.dark {
+  --primary: oklch(0.7 0.2 260);
+  --primary-foreground: oklch(0.1 0 0);
+}
+```
+
+## Important Notes
+
+- `src/styles.css` must be processed by your application's Tailwind CSS build (it contains `@import`, `@theme`, and `@utility` directives)
+- All colors use the OKLCh color space for perceptual uniformity
+- Dark mode is activated by adding the `dark` class to a parent element

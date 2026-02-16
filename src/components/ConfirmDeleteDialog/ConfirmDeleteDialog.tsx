@@ -30,12 +30,12 @@ export function ConfirmDeleteDialog({
 }: ConfirmDeleteDialogProps) {
 	return (
 		<Dialog open={open} onOpenChange={onOpenChange}>
-			<DialogContent showCloseButton={true}>
+			<DialogContent showCloseIcon={true}>
 				<DialogHeader>
 					<DialogTitle>{title}</DialogTitle>
 					<DialogDescription>{description}</DialogDescription>
 				</DialogHeader>
-				<DialogFooter showCloseButton={false}>
+				<DialogFooter showCloseAction={false}>
 					<Button variant="outline" onClick={() => onOpenChange(false)}>
 						Cancel
 					</Button>
@@ -44,7 +44,7 @@ export function ConfirmDeleteDialog({
 						onClick={onConfirm}
 						disabled={isPending}
 					>
-						{isPending ? 'Deleting…' : 'Delete'}
+						{isPending ? 'Deleting\u2026' : 'Delete'}
 					</Button>
 				</DialogFooter>
 			</DialogContent>

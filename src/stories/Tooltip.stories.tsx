@@ -6,6 +6,7 @@ import {
     TooltipTrigger,
 } from "@/components/Tooltip";
 import type { Meta, StoryObj } from "@storybook/react";
+import { expect, userEvent, within } from "storybook/test";
 
 const meta: Meta<typeof Tooltip> = {
 	title: "Components/Tooltip",
@@ -31,6 +32,14 @@ export const Default: Story = {
 			</TooltipContent>
 		</Tooltip>
 	),
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement);
+		const trigger = canvas.getByRole("button", { name: "Hover me" });
+		await userEvent.hover(trigger);
+		const tooltip = await within(document.body).findByRole("tooltip");
+		await expect(tooltip).toBeVisible();
+		await expect(within(tooltip).getByText("Add to library")).toBeVisible();
+	},
 };
 
 export const WithDelay: Story = {
