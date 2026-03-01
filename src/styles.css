@@ -99,7 +99,6 @@
 
 .image-background {
 	@apply h-38 bg-cover bg-center bg-blend-overlay bg-stone-300/20 sm:-mb-16 -mb-10;
-	background-image: url('/src//assets//background-image.svg');
 	z-index: -1;
 }
 
@@ -165,7 +164,7 @@ code {
 	--foreground: oklch(0.141 0.005 285.823);
 
 	/* Card: Frosted warm white */
-	--card: oklch(1 0 0 / 0.9);
+	--card: oklch(1 0 0 / 0.75);
 	--card-foreground: oklch(0.141 0.005 285.823);
 
 	--popover: oklch(1 0 0);
@@ -232,7 +231,7 @@ code {
 	--foreground: oklch(0.985 0 0);
 
 	/* Card Elevation: Brighter than background */
-	--card: oklch(0.23 0.02 260 / 0.9);
+	--card: oklch(0.23 0.02 260 / 0.75);
 	--card-foreground: oklch(0.985 0 0);
 
 	--popover: oklch(0.21 0.015 260);
