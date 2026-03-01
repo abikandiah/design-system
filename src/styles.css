@@ -160,40 +160,49 @@ code {
 }
 
 :root {
-	--background: oklch(1 0.002 85);
+	/* --- Light Theme (Warm & Natural) --- */
+	--background: oklch(0.99 0.003 85);
 	--foreground: oklch(0.141 0.005 285.823);
-	--card: oklch(1 0 0 / 0.75);
+
+	/* Card: Frosted warm white */
+	--card: oklch(1 0 0 / 0.9);
 	--card-foreground: oklch(0.141 0.005 285.823);
+
 	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.141 0.005 285.823);
+
+	/* Primary: Solid Anchor (matches original deep tone) */
 	--primary: oklch(0.21 0.006 285.885);
 	--primary-foreground: oklch(0.985 0 0);
-	--secondary: oklch(0.967 0.001 286.375);
+
+	--secondary: oklch(0.96 0.005 85);
 	--secondary-foreground: oklch(0.21 0.006 285.885);
-	--muted: oklch(0.967 0.001 286.375);
+
+	--muted: oklch(0.96 0.005 85);
 	--muted-foreground: oklch(0.552 0.016 285.938);
-	--accent: oklch(0.967 0.001 286.375);
+
+	--accent: oklch(0.96 0.005 85);
 	--accent-foreground: oklch(0.21 0.006 285.885);
+
 	--destructive: oklch(0.577 0.245 27.325);
-	--destructive-foreground: oklch(0.577 0.245 27.325);
-	--border: oklch(0.92 0.004 286.32);
-	--input: oklch(0.92 0.004 286.32);
-	--ring: oklch(0.871 0.006 286.286);
-	--chart-1: oklch(0.646 0.222 41.116);
-	--chart-2: oklch(0.6 0.118 184.704);
-	--chart-3: oklch(0.398 0.07 227.392);
-	--chart-4: oklch(0.828 0.189 84.429);
-	--chart-5: oklch(0.769 0.188 70.08);
-	--radius: 0.625rem;
+	--destructive-foreground: oklch(0.99 0 0);
+
+	--border: oklch(0.92 0.005 85);
+	--input: oklch(0.92 0.005 85);
+	--ring: oklch(0.871 0.006 285.885);
+
+	--radius: 0.75rem;
+
+	/* Sidebar inherits warm Light palette */
 	--sidebar: var(--card);
 	--sidebar-foreground: oklch(0.141 0.005 285.823);
 	--sidebar-primary: oklch(0.21 0.006 285.885);
 	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: oklch(0.967 0.001 286.375);
+	--sidebar-accent: oklch(0.96 0.005 85);
 	--sidebar-accent-foreground: oklch(0.21 0.006 285.885);
-	--sidebar-border: oklch(0.92 0.004 286.32);
-	--sidebar-ring: oklch(0.871 0.006 286.286);
-	/* Banner: Tailwind blue/green/yellow/red (light: bg 100, text 800, border 400) */
+	--sidebar-border: oklch(0.92 0.005 85);
+
+	/* Banners (Light) */
 	--banner-info: oklch(0.931 0.038 253.71);
 	--banner-info-foreground: oklch(0.45 0.13 264.052);
 	--banner-info-border: oklch(0.704 0.165 259.815);
@@ -206,72 +215,74 @@ code {
 	--banner-alert: oklch(0.936 0.031 17.72);
 	--banner-alert-foreground: oklch(0.396 0.141 25.723);
 	--banner-alert-border: oklch(0.577 0.245 27.325);
-	/* Badge: success = green, warning = amber */
+
+	/* Interactive Elements (Light) */
 	--badge-success: oklch(0.53 0.15 145);
 	--badge-success-foreground: oklch(1 0 0);
-	--badge-warning: oklch(0.75 0.18 75);
-	--badge-warning-foreground: oklch(1 0 0);
-	/* Checkbox: light = olive checked, gray border unchecked; dark = matching contrast */
-	--checkbox-checked: oklch(0.78 0.15 125);
+	--checkbox-checked: oklch(0.45 0.12 150);
+	/* Darker olive for light contrast */
 	--checkbox-checked-foreground: oklch(1 0 0);
 	--checkbox-unchecked-bg: oklch(1 0 0);
-	--checkbox-unchecked-border: oklch(0.78 0.005 0);
+	--checkbox-unchecked-border: oklch(0.85 0.01 285);
 }
 
 .dark {
-	--background: oklch(0.141 0.005 285.823);
+	/* --- Dark Theme (Modern Slate & Glow) --- */
+	--background: oklch(0.18 0.015 260);
 	--foreground: oklch(0.985 0 0);
-	--card: oklch(0.141 0.005 285.823);
+
+	/* Card Elevation: Brighter than background */
+	--card: oklch(0.23 0.02 260 / 0.9);
 	--card-foreground: oklch(0.985 0 0);
-	--popover: oklch(0.141 0.005 285.823);
+
+	--popover: oklch(0.21 0.015 260);
 	--popover-foreground: oklch(0.985 0 0);
+
+	/* Primary: High-contrast Glow */
 	--primary: oklch(0.985 0 0);
-	--primary-foreground: oklch(0.21 0.006 285.885);
-	--secondary: oklch(0.274 0.006 286.033);
+	--primary-foreground: oklch(0.18 0.015 260);
+
+	--secondary: oklch(0.28 0.02 260);
 	--secondary-foreground: oklch(0.985 0 0);
-	--muted: oklch(0.274 0.006 286.033);
-	--muted-foreground: oklch(0.705 0.015 286.067);
-	--accent: oklch(0.274 0.006 286.033);
+
+	--muted: oklch(0.28 0.02 260);
+	--muted-foreground: oklch(0.705 0.015 260);
+
+	--accent: oklch(0.28 0.02 260);
 	--accent-foreground: oklch(0.985 0 0);
-	--destructive: oklch(0.396 0.141 25.723);
-	--destructive-foreground: oklch(0.637 0.237 25.331);
-	--border: oklch(0.274 0.006 286.033);
-	--input: oklch(0.274 0.006 286.033);
-	--ring: oklch(0.442 0.017 285.786);
-	--chart-1: oklch(0.488 0.243 264.376);
-	--chart-2: oklch(0.696 0.17 162.48);
-	--chart-3: oklch(0.769 0.188 70.08);
-	--chart-4: oklch(0.627 0.265 303.9);
-	--chart-5: oklch(0.645 0.246 16.439);
-	--sidebar: oklch(0.21 0.006 285.885);
+
+	--destructive: oklch(0.45 0.15 25);
+	--destructive-foreground: oklch(0.985 0 0);
+
+	--border: oklch(0.32 0.02 260);
+	--input: oklch(0.32 0.02 260);
+	--ring: oklch(0.442 0.017 260);
+
+	/* Sidebar (Dark) */
+	--sidebar: oklch(0.21 0.015 260);
 	--sidebar-foreground: oklch(0.985 0 0);
-	--sidebar-primary: oklch(0.488 0.243 264.376);
+	--sidebar-primary: oklch(0.488 0.243 260);
 	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: oklch(0.274 0.006 286.033);
-	--sidebar-accent-foreground: oklch(0.985 0 0);
-	--sidebar-border: oklch(0.274 0.006 286.033);
-	--sidebar-ring: oklch(0.442 0.017 285.786);
-	/* Banner: Tailwind blue/green/yellow/red (dark: bg 950, text 100, border 600) */
-	--banner-info: oklch(0.274 0.079 264.695);
-	--banner-info-foreground: oklch(0.925 0.033 264.665);
-	--banner-info-border: oklch(0.488 0.243 264.376);
-	--banner-note: oklch(0.266 0.065 152.934);
-	--banner-note-foreground: oklch(0.962 0.044 156.743);
-	--banner-note-border: oklch(0.627 0.194 149.214);
-	--banner-warning: oklch(0.304 0.063 73.684);
-	--banner-warning-foreground: oklch(0.969 0.071 103.748);
-	--banner-warning-border: oklch(0.627 0.194 149.214);
-	--banner-alert: oklch(0.293 0.084 27.325);
-	--banner-alert-foreground: oklch(0.969 0.071 27.325);
-	--banner-alert-border: oklch(0.577 0.245 27.325);
+	--sidebar-border: oklch(0.32 0.02 260);
+
+	/* Banners (Dark - Desaturated) */
+	--banner-info: oklch(0.274 0.079 260);
+	--banner-info-foreground: oklch(0.925 0.033 260);
+	--banner-info-border: oklch(0.488 0.2 260);
+	--banner-note: oklch(0.266 0.065 152);
+	--banner-note-foreground: oklch(0.962 0.044 156);
+	--banner-warning: oklch(0.304 0.063 73);
+	--banner-warning-foreground: oklch(0.969 0.071 103);
+	--banner-alert: oklch(0.293 0.084 27);
+	--banner-alert-foreground: oklch(0.969 0.071 27);
+
+	/* Interactive Elements (Dark) */
 	--badge-success: oklch(0.48 0.15 150);
 	--badge-success-foreground: oklch(1 0 0);
-	--badge-warning: oklch(0.65 0.18 75);
-	--badge-warning-foreground: oklch(1 0 0);
 	--checkbox-checked: oklch(0.72 0.17 130);
-	--checkbox-checked-foreground: oklch(1 0 0);
-	--checkbox-unchecked-bg: oklch(0.28 0.01 260);
-	--checkbox-unchecked-border: oklch(0.5 0.01 260);
+	--checkbox-checked-foreground: oklch(0.18 0.015 260);
+	--checkbox-unchecked-bg: oklch(0.25 0.01 260);
+	--checkbox-unchecked-border: oklch(0.4 0.01 260);
 }
 
 /* Banner: colors from styles.css tokens; type → info=blue, note=green, warning=yellow, alert=red */
