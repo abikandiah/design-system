@@ -168,7 +168,7 @@ code {
 	--card: oklch(1 0 0 / 0.75);
 	--card-foreground: oklch(0.2 0.01 85);
 
-	--popover: oklch(1 0 0 / 0.75);
+	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.2 0.01 85);
 
 	/* Primary: Deep Warm Charcoal (Neutral & High Contrast) */
@@ -236,7 +236,7 @@ code {
 	--card: oklch(0.23 0.02 260 / 0.75);
 	--card-foreground: oklch(0.985 0 0);
 
-	--popover: oklch(0.21 0.015 260 / 0.75);
+	--popover: oklch(0.21 0.015 260);
 	--popover-foreground: oklch(0.985 0 0);
 
 	/* Primary: Electric Cyan Glow */
@@ -264,6 +264,8 @@ code {
 	--sidebar-foreground: oklch(0.985 0 0);
 	--sidebar-primary: oklch(0.9 0.1 220);
 	--sidebar-primary-foreground: oklch(0.18 0.015 260);
+	--sidebar-accent: oklch(0.28 0.02 260);
+	--sidebar-accent-foreground: oklch(0.985 0 0);
 	--sidebar-border: oklch(0.32 0.02 260);
 
 	/* Banners (Dark - Desaturated) */
@@ -272,10 +274,13 @@ code {
 	--banner-info-border: oklch(0.488 0.2 260);
 	--banner-note: oklch(0.266 0.065 152);
 	--banner-note-foreground: oklch(0.962 0.044 156);
+	--banner-note-border: oklch(0.45 0.1 152);
 	--banner-warning: oklch(0.304 0.063 73);
 	--banner-warning-foreground: oklch(0.969 0.071 103);
+	--banner-warning-border: oklch(0.48 0.1 73);
 	--banner-alert: oklch(0.293 0.084 27);
 	--banner-alert-foreground: oklch(0.969 0.071 27);
+	--banner-alert-border: oklch(0.45 0.12 27);
 
 	/* Interactive Elements (Dark) */
 	--badge-success: oklch(0.48 0.15 150);
