@@ -1,17 +1,10 @@
 import type { onClickCallback } from "@/types/types";
 import { cn } from "@/utils";
 import { CircleX, Info, Lightbulb, TriangleAlert, X } from "lucide-react";
+import type React from "react";
 import { Button } from "../Button";
 import { Skeleton } from "../Skeleton";
-
-const bannerType = {
-	Info: 'info',
-	Note: 'note',
-	Warning: 'warning',
-	Alert: 'alert'
-} as const;
-
-type TBannerType = (typeof bannerType)[keyof typeof bannerType];
+import { bannerType, type TBannerType } from "./bannerType";
 
 /** Banner colors and layout are in design-system styles.css via [data-banner-type]. Type → color: info=blue, note=green, warning=yellow, alert=red. */
 const icons: Record<TBannerType, React.ComponentType> = {
@@ -26,11 +19,12 @@ interface BannerProps extends React.ComponentProps<"div"> {
 	title?: string;
 	loading?: boolean;
 	hideIcon?: boolean;
+	icon: React.ComponentType,
 	onClose?: onClickCallback<HTMLButtonElement>;
 }
 
-function Banner({ type, title, loading, hideIcon, onClose, children, className, ...props }: BannerProps) {
-	const Icon = icons[type] ?? icons[bannerType.Note];
+function Banner({ type, title, loading, icon, hideIcon, onClose, children, className, ...props }: BannerProps) {
+	const Icon = icon ?? icons[type] ?? icons[bannerType.Note];
 
 	return (
 		<div
@@ -108,5 +102,5 @@ function CloseButton(props: React.ComponentProps<"button">) {
 	);
 }
 
-export { Banner, bannerType, MessageBanner, type TBannerType };
+export { Banner, MessageBanner };
 

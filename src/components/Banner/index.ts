@@ -1,3 +1,4 @@
 
-export { Banner, MessageBanner, bannerType, type TBannerType } from "./Banner";
+export { Banner, MessageBanner } from "./Banner";
+export { bannerType, type TBannerType } from "./bannerType";
 

@@ -8,9 +8,29 @@ This design system uses **OKLCh CSS custom properties** for all colors, with aut
 
 ## How Theming Works
 
-1. All tokens are defined in `src/styles.css` as CSS custom properties on `:root` (light) and `.dark` (dark)
-2. Tailwind CSS 4 maps these to utility classes via `@theme inline` block
+1. Tokens are defined in theme files as CSS custom properties on `:root` (light) and `.dark` (dark)
+2. Tailwind CSS 4 maps these to utility classes via the `@theme inline` block in `styles.css`
 3. Components use semantic color names (e.g. `bg-primary`, `text-muted-foreground`) rather than raw colors
+
+## Available Themes
+
+Two themes are provided, each bundling both a light and dark variant:
+
+| Theme | File | Character |
+|-------|------|-----------|
+| **Linen** | `themes/linen.css` | Warm whites, soft charcoal — light is minimal warmth, dark is candlelit charcoal |
+| **Steel** | `themes/steel.css` | Cool grays, industrial blue — light is brushed aluminum, dark is slate & electric glow |
+
+Import one alongside `styles.css` in your application:
+
+```js
+import '@abumble/design-system/styles.css';
+import '@abumble/design-system/themes/linen.css';
+// or
+import '@abumble/design-system/themes/steel.css';
+```
+
+Dark mode is activated by adding the `dark` class to a parent element (typically `<html>`).
 
 ## Core Color Tokens
 
@@ -69,17 +89,11 @@ Used by the `Banner` component via `data-banner-type` attribute:
 | `--checkbox-checked` / `--checkbox-checked-foreground` | Checked state |
 | `--checkbox-unchecked-bg` / `--checkbox-unchecked-border` | Unchecked state |
 
-## Chart Tokens
-
-| Token | Usage |
-|-------|-------|
-| `--chart-1` through `--chart-5` | Chart/data visualization colors |
-
 ## Radius Tokens
 
 | Token | Value |
 |-------|-------|
-| `--radius` | Base radius (`0.625rem`) |
+| `--radius` | Base radius (varies per theme) |
 | `--radius-sm` | `calc(var(--radius) - 4px)` |
 | `--radius-md` | `calc(var(--radius) - 2px)` |
 | `--radius-lg` | `var(--radius)` |
@@ -87,7 +101,7 @@ Used by the `Banner` component via `data-banner-type` attribute:
 
 ## Customizing the Theme
 
-To customize the theme in your consuming application, override the CSS custom properties:
+To override specific tokens in your consuming application:
 
 ```css
 :root {
@@ -103,6 +117,6 @@ To customize the theme in your consuming application, override the CSS custom pr
 
 ## Important Notes
 
-- `src/styles.css` must be processed by your application's Tailwind CSS build (it contains `@import`, `@theme`, and `@utility` directives)
+- `styles.css` must be processed by your application's Tailwind CSS build (it contains `@import`, `@theme`, and `@utility` directives)
 - All colors use the OKLCh color space for perceptual uniformity
 - Dark mode is activated by adding the `dark` class to a parent element

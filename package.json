@@ -3,7 +3,8 @@
 	"version": "0.0.35",
 	"files": [
 		"dist",
-		"src/styles.css"
+		"src/styles.css",
+		"src/themes"
 	],
 	"exports": {
 		".": {
@@ -166,7 +167,9 @@
 			"import": "./dist/use-mobile.js",
 			"types": "./dist/hooks/use-mobile.d.ts"
 		},
-		"./styles.css": "./src/styles.css"
+		"./styles.css": "./src/styles.css",
+		"./themes/linen.css": "./src/themes/linen.css",
+		"./themes/steel.css": "./src/themes/steel.css"
 	},
 	"scripts": {
 		"version": "npm run build",

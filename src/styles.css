@@ -5,7 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @custom-variant dark (&:is(.dark *));
 
 @theme {
@@ -26,13 +25,11 @@
 }
 
 @layer base {
-
 	button:not(:disabled),
-	[role="button"]:not(:disabled) {
+	[role='button']:not(:disabled) {
 		cursor: pointer;
 	}
 }
-
 
 @keyframes rumble {
 	0% {
@@ -57,7 +54,6 @@
 }
 
 @keyframes slide-right-return {
-
 	0% {
 		transform: translateX(-50%) scaleX(1);
 	}
@@ -107,15 +103,15 @@
 }
 
 .sidebar-text {
-	@apply text-sidebar-foreground/70 ring-sidebar-ring flex h-8 shrink-0 items-center rounded px-2 text-xs font-medium
+	@apply text-sidebar-foreground/70 ring-sidebar-ring flex h-8 shrink-0 items-center rounded px-2 text-xs font-medium;
 }
 
 .code {
-	@apply text-sm px-1 bg-background rounded border-container
+	@apply text-sm px-1 bg-background rounded border-container;
 }
 
 .sidebar {
-	@apply text-sidebar-foreground
+	@apply text-sidebar-foreground;
 }
 
 .header {
@@ -123,19 +119,19 @@
 }
 
 .sub-heading {
-	@apply mt-8 mb-1 font-semibold text-gray-900
+	@apply mt-8 mb-1 font-semibold text-gray-900;
 }
 
 .p-text {
-	@apply leading-relaxed text-gray-900
+	@apply leading-relaxed text-gray-900;
 }
 
 .text-link {
-	@apply text-blue-600 hover:text-blue-800 visited:text-blue-900
+	@apply text-blue-600 hover:text-blue-800 visited:text-blue-900;
 }
 
 .nav-link {
-	@apply relative block px-3 py-2 transition text-gray-700 hover:text-gray-950
+	@apply relative block px-3 py-2 transition text-gray-700 hover:text-gray-950;
 }
 
 .nav-link:hover,
@@ -158,141 +154,7 @@ code {
 		source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-:root {
-	/* --- Light Theme (Linen & Slate - Minimal Warmth) --- */
-	--background: oklch(0.992 0.003 85);
-	/* Clean Linen White */
-	--foreground: oklch(0.2 0.01 85);
-
-	/* Surfaces (Tables, Cards, Buttons) - Frosted White */
-	--card: oklch(1 0 0 / 0.75);
-	--card-foreground: oklch(0.2 0.01 85);
-
-	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.2 0.01 85);
-
-	/* Primary: Deep Warm Charcoal (Neutral & High Contrast) */
-	--primary: oklch(0.18 0.01 85);
-	--primary-foreground: oklch(1 0 0);
-
-	/* Button/Surface Colors: Pure White */
-	--secondary: oklch(1 0 0);
-	--secondary-foreground: oklch(0.18 0.01 85);
-
-	--muted: oklch(1 0 0);
-	--muted-foreground: oklch(0.5 0.01 85);
-
-	--accent: oklch(1 0 0);
-	--accent-foreground: oklch(0.18 0.01 85);
-
-	--destructive: oklch(0.55 0.15 25);
-	--destructive-foreground: oklch(1 0 0);
-
-	--border: oklch(0.94 0.005 85);
-	--input: oklch(0.94 0.005 85);
-	--ring: oklch(0.18 0.01 85 / 0.1);
-
-	--radius: 0.6rem;
-
-	/* Sidebar (Soft White) */
-	--sidebar: oklch(0.995 0.002 85);
-	--sidebar-foreground: oklch(0.2 0.01 85);
-	--sidebar-primary: oklch(0.18 0.01 85);
-	--sidebar-primary-foreground: oklch(1 0 0);
-	--sidebar-accent: oklch(0.97 0.01 85);
-	/* Slightly darker for active/hover state */
-	--sidebar-accent-foreground: oklch(0.18 0.01 85);
-	--sidebar-border: oklch(0.95 0.005 85);
-
-	/* Banners (Refined) */
-	--banner-info: oklch(0.94 0.02 240);
-	--banner-info-foreground: oklch(0.4 0.1 240);
-	--banner-info-border: oklch(0.85 0.05 240);
-	--banner-note: oklch(0.94 0.02 160);
-	--banner-note-foreground: oklch(0.35 0.1 160);
-	--banner-note-border: oklch(0.85 0.05 160);
-	--banner-warning: oklch(0.95 0.03 80);
-	--banner-warning-foreground: oklch(0.45 0.1 60);
-	--banner-warning-border: oklch(0.88 0.05 70);
-	--banner-alert: oklch(0.95 0.03 25);
-	--banner-alert-foreground: oklch(0.45 0.12 25);
-	--banner-alert-border: oklch(0.88 0.08 25);
-
-	/* Interactive Elements */
-	--badge-success: oklch(0.4 0.1 160);
-	--badge-success-foreground: oklch(1 0 0);
-	--checkbox-checked: oklch(0.15 0.01 60);
-	--checkbox-checked-foreground: oklch(1 0 0);
-	--checkbox-unchecked-bg: oklch(1 0 0);
-	--checkbox-unchecked-border: oklch(0.88 0.01 60);
-}
-
-.dark {
-	/* --- Dark Theme (Modern Slate & Glow) --- */
-	--background: oklch(0.18 0.015 260);
-	--foreground: oklch(0.985 0 0);
-
-	/* Card Elevation: Brighter than background */
-	--card: oklch(0.23 0.02 260 / 0.75);
-	--card-foreground: oklch(0.985 0 0);
-
-	--popover: oklch(0.21 0.015 260);
-	--popover-foreground: oklch(0.985 0 0);
-
-	/* Primary: Electric Cyan Glow */
-	--primary: oklch(0.9 0.1 220);
-	--primary-foreground: oklch(0.18 0.015 260);
-
-	--secondary: oklch(0.28 0.02 260);
-	--secondary-foreground: oklch(0.9 0.1 220);
-
-	--muted: oklch(0.28 0.02 260);
-	--muted-foreground: oklch(0.705 0.015 260);
-
-	--accent: oklch(0.28 0.02 260);
-	--accent-foreground: oklch(0.9 0.1 220);
-
-	--destructive: oklch(0.45 0.15 25);
-	--destructive-foreground: oklch(0.985 0 0);
-
-	--border: oklch(0.32 0.02 260);
-	--input: oklch(0.32 0.02 260);
-	--ring: oklch(0.9 0.1 220 / 0.3);
-
-	/* Sidebar (Dark) */
-	--sidebar: oklch(0.21 0.015 260);
-	--sidebar-foreground: oklch(0.985 0 0);
-	--sidebar-primary: oklch(0.9 0.1 220);
-	--sidebar-primary-foreground: oklch(0.18 0.015 260);
-	--sidebar-accent: oklch(0.28 0.02 260);
-	--sidebar-accent-foreground: oklch(0.985 0 0);
-	--sidebar-border: oklch(0.32 0.02 260);
-
-	/* Banners (Dark - Desaturated) */
-	--banner-info: oklch(0.274 0.079 260);
-	--banner-info-foreground: oklch(0.925 0.033 260);
-	--banner-info-border: oklch(0.488 0.2 260);
-	--banner-note: oklch(0.266 0.065 152);
-	--banner-note-foreground: oklch(0.962 0.044 156);
-	--banner-note-border: oklch(0.45 0.1 152);
-	--banner-warning: oklch(0.304 0.063 73);
-	--banner-warning-foreground: oklch(0.969 0.071 103);
-	--banner-warning-border: oklch(0.48 0.1 73);
-	--banner-alert: oklch(0.293 0.084 27);
-	--banner-alert-foreground: oklch(0.969 0.071 27);
-	--banner-alert-border: oklch(0.45 0.12 27);
-
-	/* Interactive Elements (Dark) */
-	--badge-success: oklch(0.48 0.15 150);
-	--badge-success-foreground: oklch(1 0 0);
-	--checkbox-checked: oklch(0.9 0.1 220);
-	--checkbox-checked-foreground: oklch(0.18 0.015 260);
-	--checkbox-unchecked-bg: oklch(0.25 0.01 260);
-	--checkbox-unchecked-border: oklch(0.4 0.01 260);
-}
-
-
-/* Banner: colors from styles.css tokens; type → info=blue, note=green, warning=yellow, alert=red */
+/* Banner: colors from theme tokens; type → info=blue, note=green, warning=yellow, alert=red */
 [data-banner-type] {
 	border-left-width: 4px;
 	border-left-style: solid;
@@ -300,25 +162,25 @@ code {
 	padding: 0.75rem;
 }
 
-[data-banner-type="info"] {
+[data-banner-type='info'] {
 	background: var(--banner-info);
 	color: var(--banner-info-foreground);
 	border-left-color: var(--banner-info-border);
 }
 
-[data-banner-type="note"] {
+[data-banner-type='note'] {
 	background: var(--banner-note);
 	color: var(--banner-note-foreground);
 	border-left-color: var(--banner-note-border);
 }
 
-[data-banner-type="warning"] {
+[data-banner-type='warning'] {
 	background: var(--banner-warning);
 	color: var(--banner-warning-foreground);
 	border-left-color: var(--banner-warning-border);
 }
 
-[data-banner-type="alert"] {
+[data-banner-type='alert'] {
 	background: var(--banner-alert);
 	color: var(--banner-alert-foreground);
 	border-left-color: var(--banner-alert-border);
