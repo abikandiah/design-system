@@ -42,7 +42,12 @@ export function BackLink({
 	)
 
 	if (asChild) {
-		const child = React.Children.only(children) as React.ReactElement
+		let child: React.ReactElement
+		try {
+			child = React.Children.only(children) as React.ReactElement
+		} catch {
+			throw new Error('BackLink with asChild requires exactly one child element.')
+		}
 		const mergedProps = {
 			'data-slot': 'back-link',
 			className: slotClassName,

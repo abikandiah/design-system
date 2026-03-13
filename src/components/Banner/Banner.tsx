@@ -7,7 +7,7 @@ import { Skeleton } from '../Skeleton'
 import { bannerType, type TBannerType } from './bannerType'
 
 /** Banner colors and layout are in design-system styles.css via [data-banner-type]. Type → color: info=blue, note=green, warning=yellow, alert=red. */
-const icons: Record<TBannerType, React.ComponentType> = {
+const icons: Record<TBannerType, React.ComponentType<{ className?: string }>> = {
 	[bannerType.Info]: Info,
 	[bannerType.Note]: Lightbulb,
 	[bannerType.Warning]: TriangleAlert,
@@ -19,7 +19,7 @@ interface BannerProps extends React.ComponentProps<'div'> {
 	title?: string
 	loading?: boolean
 	hideIcon?: boolean
-	icon?: React.ComponentType
+	icon?: React.ComponentType<{ className?: string }>
 	onClose?: onClickCallback<HTMLButtonElement>
 }
 

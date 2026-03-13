@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 
 const variants = cva(
-	"bg-stone-300 rounded",
+	"bg-muted rounded",
 	{
 		variants: {
 			variant: {
