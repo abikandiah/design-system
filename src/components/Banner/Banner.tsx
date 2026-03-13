@@ -1,30 +1,40 @@
-import type { onClickCallback } from "@/types/types";
-import { cn } from "@/utils";
-import { CircleX, Info, Lightbulb, TriangleAlert, X } from "lucide-react";
-import type React from "react";
-import { Button } from "../Button";
-import { Skeleton } from "../Skeleton";
-import { bannerType, type TBannerType } from "./bannerType";
+import type { onClickCallback } from '@/types/types'
+import { cn } from '@/utils'
+import { CircleX, Info, Lightbulb, TriangleAlert, X } from 'lucide-react'
+import type React from 'react'
+import { Button } from '../Button'
+import { Skeleton } from '../Skeleton'
+import { bannerType, type TBannerType } from './bannerType'
 
 /** Banner colors and layout are in design-system styles.css via [data-banner-type]. Type → color: info=blue, note=green, warning=yellow, alert=red. */
 const icons: Record<TBannerType, React.ComponentType> = {
 	[bannerType.Info]: Info,
 	[bannerType.Note]: Lightbulb,
 	[bannerType.Warning]: TriangleAlert,
-	[bannerType.Alert]: CircleX
-};
-
-interface BannerProps extends React.ComponentProps<"div"> {
-	type: TBannerType;
-	title?: string;
-	loading?: boolean;
-	hideIcon?: boolean;
-	icon: React.ComponentType,
-	onClose?: onClickCallback<HTMLButtonElement>;
+	[bannerType.Alert]: CircleX,
 }
 
-function Banner({ type, title, loading, icon, hideIcon, onClose, children, className, ...props }: BannerProps) {
-	const Icon = icon ?? icons[type] ?? icons[bannerType.Note];
+interface BannerProps extends React.ComponentProps<'div'> {
+	type: TBannerType
+	title?: string
+	loading?: boolean
+	hideIcon?: boolean
+	icon?: React.ComponentType
+	onClose?: onClickCallback<HTMLButtonElement>
+}
+
+function Banner({
+	type,
+	title,
+	loading,
+	icon,
+	hideIcon,
+	onClose,
+	children,
+	className,
+	...props
+}: BannerProps) {
+	const Icon = icon ?? icons[type] ?? icons[bannerType.Note]
 
 	return (
 		<div
@@ -34,44 +44,36 @@ function Banner({ type, title, loading, icon, hideIcon, onClose, children, class
 			{...props}
 		>
 			<div className="flex items-start">
-				{loading ?
+				{loading ? (
 					<BannerLoadingContent />
-					:
+				) : (
 					<>
-						{!hideIcon &&
-							<div className="flex-shrink-0 mr-3">
+						{!hideIcon && (
+							<div className="shrink-0 mr-3">
 								<Icon />
 							</div>
-						}
+						)}
 						<section>
-							{title && (
-								<p className="font-bold">
-									{title}
-								</p>
-							)}
+							{title && <p className="font-bold">{title}</p>}
 							{children}
 						</section>
 					</>
-				}
+				)}
 
-				{onClose &&
-					<CloseButton onClick={onClose} />
-				}
+				{onClose && <CloseButton onClick={onClose} />}
 			</div>
 		</div>
 	)
 }
 
 interface MessageBannerProps extends BannerProps {
-	message: string | React.ReactNode;
+	message: string | React.ReactNode
 }
 
 function MessageBanner({ message, ...props }: MessageBannerProps) {
 	return (
 		<Banner {...props}>
-			<p className="text-sm">
-				{message}
-			</p>
+			<p className="text-sm">{message}</p>
 		</Banner>
 	)
 }
@@ -88,7 +90,7 @@ function BannerLoadingContent() {
 	)
 }
 
-function CloseButton(props: React.ComponentProps<"button">) {
+function CloseButton(props: React.ComponentProps<'button'>) {
 	return (
 		<Button
 			variant="ghost"
@@ -99,8 +101,7 @@ function CloseButton(props: React.ComponentProps<"button">) {
 			<X />
 			<span className="sr-only">Close banner</span>
 		</Button>
-	);
+	)
 }
 
-export { Banner, MessageBanner };
-
+export { Banner, MessageBanner }

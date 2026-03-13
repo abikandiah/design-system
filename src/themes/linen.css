@@ -65,7 +65,138 @@
 	--checkbox-unchecked-border: oklch(0.88 0.01 60);
 }
 
+[data-theme="linen"] {
+	/* --- Light Theme (Linen & Slate - Minimal Warmth) --- */
+	--background: oklch(0.992 0.003 85);
+	--foreground: oklch(0.2 0.01 85);
+
+	/* Surfaces (Tables, Cards, Buttons) - Frosted White */
+	--card: oklch(1 0 0 / 0.75);
+	--card-foreground: oklch(0.2 0.01 85);
+
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.2 0.01 85);
+
+	/* Primary: Deep Warm Charcoal (Neutral & High Contrast) */
+	--primary: oklch(0.18 0.01 85);
+	--primary-foreground: oklch(1 0 0);
+
+	/* Button/Surface Colors: Pure White */
+	--secondary: oklch(1 0 0);
+	--secondary-foreground: oklch(0.18 0.01 85);
+
+	--muted: oklch(1 0 0);
+	--muted-foreground: oklch(0.5 0.01 85);
+
+	--accent: oklch(1 0 0);
+	--accent-foreground: oklch(0.18 0.01 85);
+
+	--destructive: oklch(0.55 0.15 25);
+	--destructive-foreground: oklch(1 0 0);
+
+	--border: oklch(0.94 0.005 85);
+	--input: oklch(0.94 0.005 85);
+	--ring: oklch(0.18 0.01 85 / 0.1);
+
+	--radius: 0.6rem;
+
+	/* Sidebar (Soft White) */
+	--sidebar: oklch(0.995 0.002 85);
+	--sidebar-foreground: oklch(0.2 0.01 85);
+	--sidebar-primary: oklch(0.18 0.01 85);
+	--sidebar-primary-foreground: oklch(1 0 0);
+	--sidebar-accent: oklch(0.97 0.01 85);
+	--sidebar-accent-foreground: oklch(0.18 0.01 85);
+	--sidebar-border: oklch(0.95 0.005 85);
+
+	/* Banners */
+	--banner-info: oklch(0.94 0.02 240);
+	--banner-info-foreground: oklch(0.4 0.1 240);
+	--banner-info-border: oklch(0.85 0.05 240);
+	--banner-note: oklch(0.94 0.02 160);
+	--banner-note-foreground: oklch(0.35 0.1 160);
+	--banner-note-border: oklch(0.85 0.05 160);
+	--banner-warning: oklch(0.95 0.03 80);
+	--banner-warning-foreground: oklch(0.45 0.1 60);
+	--banner-warning-border: oklch(0.88 0.05 70);
+	--banner-alert: oklch(0.95 0.03 25);
+	--banner-alert-foreground: oklch(0.45 0.12 25);
+	--banner-alert-border: oklch(0.88 0.08 25);
+
+	/* Interactive Elements */
+	--badge-success: oklch(0.4 0.1 160);
+	--badge-success-foreground: oklch(1 0 0);
+	--checkbox-checked: oklch(0.15 0.01 60);
+	--checkbox-checked-foreground: oklch(1 0 0);
+	--checkbox-unchecked-bg: oklch(1 0 0);
+	--checkbox-unchecked-border: oklch(0.88 0.01 60);
+}
+
 .dark {
+	/* --- Dark Theme (Warm Charcoal - Candlelit) --- */
+	--background: oklch(0.14 0.01 80);
+	--foreground: oklch(0.93 0.01 85);
+
+	/* Card Elevation: Warm lifted surface */
+	--card: oklch(0.19 0.012 80 / 0.75);
+	--card-foreground: oklch(0.93 0.01 85);
+
+	--popover: oklch(0.17 0.01 80);
+	--popover-foreground: oklch(0.93 0.01 85);
+
+	/* Primary: Warm Sand/Cream */
+	--primary: oklch(0.86 0.05 85);
+	--primary-foreground: oklch(0.14 0.01 80);
+
+	--secondary: oklch(0.24 0.01 80);
+	--secondary-foreground: oklch(0.86 0.05 85);
+
+	--muted: oklch(0.24 0.01 80);
+	--muted-foreground: oklch(0.60 0.01 85);
+
+	--accent: oklch(0.24 0.01 80);
+	--accent-foreground: oklch(0.86 0.05 85);
+
+	--destructive: oklch(0.48 0.15 25);
+	--destructive-foreground: oklch(0.93 0.01 85);
+
+	--border: oklch(0.28 0.01 80);
+	--input: oklch(0.28 0.01 80);
+	--ring: oklch(0.86 0.05 85 / 0.3);
+
+	/* Sidebar (Warm Dark) */
+	--sidebar: oklch(0.17 0.01 80);
+	--sidebar-foreground: oklch(0.93 0.01 85);
+	--sidebar-primary: oklch(0.86 0.05 85);
+	--sidebar-primary-foreground: oklch(0.14 0.01 80);
+	--sidebar-accent: oklch(0.23 0.01 80);
+	--sidebar-accent-foreground: oklch(0.93 0.01 85);
+	--sidebar-border: oklch(0.28 0.01 80);
+
+	/* Banners (Warm Dark) */
+	--banner-info: oklch(0.22 0.04 230);
+	--banner-info-foreground: oklch(0.88 0.05 230);
+	--banner-info-border: oklch(0.48 0.16 235);
+	--banner-note: oklch(0.22 0.04 155);
+	--banner-note-foreground: oklch(0.88 0.06 155);
+	--banner-note-border: oklch(0.44 0.1 155);
+	--banner-warning: oklch(0.26 0.06 70);
+	--banner-warning-foreground: oklch(0.92 0.1 80);
+	--banner-warning-border: oklch(0.65 0.2 75);
+	--banner-alert: oklch(0.23 0.05 25);
+	--banner-alert-foreground: oklch(0.9 0.06 25);
+	--banner-alert-border: oklch(0.44 0.14 25);
+
+	/* Interactive Elements (Warm Dark) */
+	--badge-success: oklch(0.44 0.12 150);
+	--badge-success-foreground: oklch(0.93 0.01 85);
+	--checkbox-checked: oklch(0.86 0.05 85);
+	--checkbox-checked-foreground: oklch(0.14 0.01 80);
+	--checkbox-unchecked-bg: oklch(0.22 0.01 80);
+	--checkbox-unchecked-border: oklch(0.35 0.01 80);
+}
+
+[data-theme="linen"].dark {
 	/* --- Dark Theme (Warm Charcoal - Candlelit) --- */
 	--background: oklch(0.14 0.01 80);
 	--foreground: oklch(0.93 0.01 85);
