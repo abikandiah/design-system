@@ -18,11 +18,11 @@ function getStoredTheme(): Theme {
 	return 'dark'
 }
 
-function getStoredColorTheme(): ColorTheme {
-	if (typeof window === 'undefined') return 'linen'
+function getStoredColorTheme(defaultColorTheme: ColorTheme): ColorTheme {
+	if (typeof window === 'undefined') return defaultColorTheme
 	const stored = localStorage.getItem(COLOR_THEME_STORAGE_KEY)
 	if (stored === 'linen' || stored === 'steel') return stored
-	return 'linen'
+	return defaultColorTheme
 }
 
 function applyTheme(effective: 'light' | 'dark') {
@@ -38,10 +38,17 @@ function applyColorTheme(colorTheme: ColorTheme) {
 	document.documentElement.setAttribute('data-theme', colorTheme)
 }
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
+export function ThemeProvider({
+	children,
+	defaultColorTheme = 'steel',
+}: {
+	children: ReactNode
+	defaultColorTheme?: ColorTheme
+}) {
 	const [theme, setThemeState] = useState<Theme>(getStoredTheme)
-	const [colorTheme, setColorThemeState] =
-		useState<ColorTheme>(getStoredColorTheme)
+	const [colorTheme, setColorThemeState] = useState<ColorTheme>(() =>
+		getStoredColorTheme(defaultColorTheme),
+	)
 	const [systemDark, setSystemDark] = useState(
 		() => window.matchMedia('(prefers-color-scheme: dark)').matches,
 	)
