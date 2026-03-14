@@ -19,7 +19,7 @@
 }
 
 @utility border-container {
-	@apply border border-stone-300/80;
+	@apply border border-border;
 }
 
 @utility random-rotation {
@@ -117,7 +117,7 @@
 }
 
 .header {
-	@apply z-50 fixed w-full top-0 px-3 flex justify-between text-card-foreground bg-card border-container items-center;
+	@apply z-50 fixed w-full h-14 top-0 px-3 flex justify-between text-card-foreground bg-card border-container items-center;
 }
 
 .sub-heading {
