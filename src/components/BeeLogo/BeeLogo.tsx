@@ -46,13 +46,16 @@ export function BeeLogo({
 				'BeeLogo with asChild requires exactly one child element.',
 			)
 		}
+		const childProps = child.props as React.HTMLAttributes<HTMLElement>
 		const mergedProps: object = {
 			'aria-label': 'Home',
-			className: cn(
-				linkClassName,
-				(child.props as React.HTMLAttributes<HTMLElement>).className,
+			className: cn(linkClassName, childProps.className),
+			children: (
+				<>
+					{logoContent}
+					{childProps.children}
+				</>
 			),
-			children: logoContent,
 		}
 		return React.cloneElement(child, mergedProps)
 	}
@@ -60,6 +63,7 @@ export function BeeLogo({
 	return (
 		<a aria-label="Home" className={linkClassName} {...props}>
 			{logoContent}
+			{children}
 		</a>
 	)
 }
