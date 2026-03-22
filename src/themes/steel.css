@@ -31,8 +31,6 @@
 	--input: oklch(0.88 0.005 250);
 	--ring: oklch(0.3 0.05 250 / 0.15);
 
-	--radius: 0.25rem; /* Sharper for robotic feel */
-
 	/* Sidebar (Cold Slate) */
 	--sidebar: oklch(0.97 0.005 250);
 	--sidebar-foreground: oklch(0.25 0.02 250);

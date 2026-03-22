@@ -1,0 +1,128 @@
+[data-theme="sage"] {
+	/* --- Light Theme (Natural, Organic - Pale Sage) --- */
+	--background: oklch(0.965 0.007 145);
+	--foreground: oklch(0.18 0.02 145);
+
+	/* Surfaces - Frosted with green tint */
+	--card: oklch(0.99 0.004 145 / 0.75);
+	--card-foreground: oklch(0.18 0.02 145);
+
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.18 0.02 145);
+
+	/* Primary: Deep Forest Green */
+	--primary: oklch(0.25 0.06 145);
+	--primary-foreground: oklch(0.97 0.005 145);
+
+	/* Button/Surface Colors */
+	--secondary: oklch(0.97 0.006 145);
+	--secondary-foreground: oklch(0.25 0.06 145);
+
+	--muted: oklch(0.94 0.006 145);
+	--muted-foreground: oklch(0.5 0.02 145);
+
+	--accent: oklch(0.92 0.008 145);
+	--accent-foreground: oklch(0.25 0.06 145);
+
+	--destructive: oklch(0.55 0.15 25);
+	--destructive-foreground: oklch(1 0 0);
+
+	--border: oklch(0.9 0.006 145);
+	--input: oklch(0.9 0.006 145);
+	--ring: oklch(0.25 0.06 145 / 0.15);
+
+	/* Sidebar (Soft Sage) */
+	--sidebar: oklch(0.97 0.006 145);
+	--sidebar-foreground: oklch(0.22 0.02 145);
+	--sidebar-primary: oklch(0.25 0.06 145);
+	--sidebar-primary-foreground: oklch(0.97 0.005 145);
+	--sidebar-accent: oklch(0.93 0.008 145);
+	--sidebar-accent-foreground: oklch(0.22 0.02 145);
+	--sidebar-border: oklch(0.91 0.006 145);
+
+	/* Banners */
+	--banner-info: oklch(0.94 0.02 240);
+	--banner-info-foreground: oklch(0.24 0.09 240);
+	--banner-info-border: oklch(0.52 0.18 240);
+	--banner-note: oklch(0.94 0.02 145);
+	--banner-note-foreground: oklch(0.24 0.1 145);
+	--banner-note-border: oklch(0.48 0.16 145);
+	--banner-warning: oklch(0.95 0.04 78);
+	--banner-warning-foreground: oklch(0.34 0.13 62);
+	--banner-warning-border: oklch(0.62 0.18 72);
+	--banner-alert: oklch(0.95 0.03 22);
+	--banner-alert-foreground: oklch(0.34 0.14 22);
+	--banner-alert-border: oklch(0.52 0.2 22);
+
+	/* Interactive Elements */
+	--badge-success: oklch(0.35 0.1 145);
+	--badge-success-foreground: oklch(0.98 0.01 145);
+	--checkbox-checked: oklch(0.25 0.06 145);
+	--checkbox-checked-foreground: oklch(1 0 0);
+	--checkbox-unchecked-bg: oklch(1 0 0);
+	--checkbox-unchecked-border: oklch(0.87 0.008 145);
+}
+
+[data-theme="sage"].dark {
+	/* --- Dark Theme (Deep Forest with Moss Glow) --- */
+	--background: oklch(0.14 0.015 145);
+	--foreground: oklch(0.93 0.01 145);
+
+	/* Card Elevation */
+	--card: oklch(0.19 0.018 145 / 0.75);
+	--card-foreground: oklch(0.93 0.01 145);
+
+	--popover: oklch(0.17 0.015 145);
+	--popover-foreground: oklch(0.93 0.01 145);
+
+	/* Primary: Bright Moss Green */
+	--primary: oklch(0.8 0.1 145);
+	--primary-foreground: oklch(0.14 0.015 145);
+
+	--secondary: oklch(0.24 0.015 145);
+	--secondary-foreground: oklch(0.8 0.1 145);
+
+	--muted: oklch(0.24 0.015 145);
+	--muted-foreground: oklch(0.62 0.015 145);
+
+	--accent: oklch(0.24 0.015 145);
+	--accent-foreground: oklch(0.8 0.1 145);
+
+	--destructive: oklch(0.45 0.15 25);
+	--destructive-foreground: oklch(0.93 0.01 145);
+
+	--border: oklch(0.28 0.015 145);
+	--input: oklch(0.28 0.015 145);
+	--ring: oklch(0.8 0.1 145 / 0.3);
+
+	/* Sidebar (Dark Forest) */
+	--sidebar: oklch(0.17 0.015 145);
+	--sidebar-foreground: oklch(0.93 0.01 145);
+	--sidebar-primary: oklch(0.8 0.1 145);
+	--sidebar-primary-foreground: oklch(0.14 0.015 145);
+	--sidebar-accent: oklch(0.23 0.015 145);
+	--sidebar-accent-foreground: oklch(0.93 0.01 145);
+	--sidebar-border: oklch(0.28 0.015 145);
+
+	/* Banners (Dark) */
+	--banner-info: oklch(0.22 0.04 240);
+	--banner-info-foreground: oklch(0.88 0.05 240);
+	--banner-info-border: oklch(0.48 0.16 240);
+	--banner-note: oklch(0.22 0.05 145);
+	--banner-note-foreground: oklch(0.88 0.06 145);
+	--banner-note-border: oklch(0.5 0.12 145);
+	--banner-warning: oklch(0.26 0.06 70);
+	--banner-warning-foreground: oklch(0.92 0.1 80);
+	--banner-warning-border: oklch(0.65 0.2 75);
+	--banner-alert: oklch(0.23 0.05 25);
+	--banner-alert-foreground: oklch(0.9 0.06 25);
+	--banner-alert-border: oklch(0.44 0.14 25);
+
+	/* Interactive Elements (Dark) */
+	--badge-success: oklch(0.48 0.15 145);
+	--badge-success-foreground: oklch(1 0 0);
+	--checkbox-checked: oklch(0.8 0.1 145);
+	--checkbox-checked-foreground: oklch(0.14 0.015 145);
+	--checkbox-unchecked-bg: oklch(0.22 0.01 145);
+	--checkbox-unchecked-border: oklch(0.38 0.01 145);
+}

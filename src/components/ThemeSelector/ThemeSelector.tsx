@@ -6,6 +6,8 @@ import { Select } from '../Select'
 const COLOR_THEMES: { value: ColorTheme; label: string }[] = [
 	{ value: 'linen', label: 'Linen' },
 	{ value: 'steel', label: 'Steel' },
+	{ value: 'sage', label: 'Sage' },
+	{ value: 'dusk', label: 'Dusk' },
 ]
 
 export function ThemeSelector({ onChange, ...props }: React.ComponentProps<typeof Select>) {

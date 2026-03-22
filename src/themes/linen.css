@@ -31,8 +31,6 @@
 	--input: oklch(0.94 0.005 85);
 	--ring: oklch(0.18 0.01 85 / 0.1);
 
-	--radius: 0.6rem;
-
 	/* Sidebar (Soft White) */
 	--sidebar: oklch(0.995 0.002 85);
 	--sidebar-foreground: oklch(0.2 0.01 85);
@@ -97,8 +95,6 @@
 	--border: oklch(0.94 0.005 85);
 	--input: oklch(0.94 0.005 85);
 	--ring: oklch(0.18 0.01 85 / 0.1);
-
-	--radius: 0.6rem;
 
 	/* Sidebar (Soft White) */
 	--sidebar: oklch(0.995 0.002 85);

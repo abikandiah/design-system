@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import "../src/styles.css";
 import "../src/themes/steel.css";
 import "../src/themes/linen.css";
+import "../src/themes/sage.css";
+import "../src/themes/dusk.css";
 
 const withThemeDecorator: Decorator = (Story, context) => {
 	const { theme = 'steel', colorMode = 'light' } = context.globals;
@@ -27,6 +29,8 @@ const preview: Preview = {
 				items: [
 					{ value: 'steel', title: 'Steel' },
 					{ value: 'linen', title: 'Linen' },
+					{ value: 'sage', title: 'Sage' },
+					{ value: 'dusk', title: 'Dusk' },
 				],
 				dynamicTitle: true,
 			},

@@ -1,0 +1,128 @@
+[data-theme="dusk"] {
+	/* --- Light Theme (Creative, Sophisticated - Pale Lavender) --- */
+	--background: oklch(0.965 0.006 295);
+	--foreground: oklch(0.2 0.02 295);
+
+	/* Surfaces */
+	--card: oklch(0.99 0.004 295 / 0.85);
+	--card-foreground: oklch(0.2 0.02 295);
+
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.2 0.02 295);
+
+	/* Primary: Deep Violet */
+	--primary: oklch(0.3 0.06 295);
+	--primary-foreground: oklch(0.98 0.005 295);
+
+	/* Button/Surface Colors */
+	--secondary: oklch(0.97 0.005 295);
+	--secondary-foreground: oklch(0.3 0.06 295);
+
+	--muted: oklch(0.94 0.005 295);
+	--muted-foreground: oklch(0.52 0.02 295);
+
+	--accent: oklch(0.92 0.008 295);
+	--accent-foreground: oklch(0.3 0.06 295);
+
+	--destructive: oklch(0.55 0.15 25);
+	--destructive-foreground: oklch(1 0 0);
+
+	--border: oklch(0.89 0.006 295);
+	--input: oklch(0.89 0.006 295);
+	--ring: oklch(0.3 0.06 295 / 0.15);
+
+	/* Sidebar (Soft Lavender) */
+	--sidebar: oklch(0.97 0.005 295);
+	--sidebar-foreground: oklch(0.25 0.02 295);
+	--sidebar-primary: oklch(0.3 0.06 295);
+	--sidebar-primary-foreground: oklch(0.98 0.005 295);
+	--sidebar-accent: oklch(0.93 0.008 295);
+	--sidebar-accent-foreground: oklch(0.25 0.02 295);
+	--sidebar-border: oklch(0.91 0.006 295);
+
+	/* Banners */
+	--banner-info: oklch(0.94 0.02 245);
+	--banner-info-foreground: oklch(0.24 0.09 245);
+	--banner-info-border: oklch(0.52 0.18 245);
+	--banner-note: oklch(0.94 0.02 295);
+	--banner-note-foreground: oklch(0.24 0.1 295);
+	--banner-note-border: oklch(0.48 0.16 295);
+	--banner-warning: oklch(0.95 0.04 78);
+	--banner-warning-foreground: oklch(0.34 0.13 62);
+	--banner-warning-border: oklch(0.62 0.18 72);
+	--banner-alert: oklch(0.95 0.03 22);
+	--banner-alert-foreground: oklch(0.34 0.14 22);
+	--banner-alert-border: oklch(0.52 0.2 22);
+
+	/* Interactive Elements */
+	--badge-success: oklch(0.35 0.1 160);
+	--badge-success-foreground: oklch(0.98 0.01 160);
+	--checkbox-checked: oklch(0.3 0.06 295);
+	--checkbox-checked-foreground: oklch(1 0 0);
+	--checkbox-unchecked-bg: oklch(1 0 0);
+	--checkbox-unchecked-border: oklch(0.86 0.008 295);
+}
+
+[data-theme="dusk"].dark {
+	/* --- Dark Theme (Deep Violet with Bright Lavender Glow) --- */
+	--background: oklch(0.17 0.015 280);
+	--foreground: oklch(0.95 0.005 295);
+
+	/* Card Elevation */
+	--card: oklch(0.22 0.018 280 / 0.75);
+	--card-foreground: oklch(0.95 0.005 295);
+
+	--popover: oklch(0.20 0.015 280);
+	--popover-foreground: oklch(0.95 0.005 295);
+
+	/* Primary: Bright Lavender Glow */
+	--primary: oklch(0.88 0.08 295);
+	--primary-foreground: oklch(0.17 0.015 280);
+
+	--secondary: oklch(0.27 0.02 280);
+	--secondary-foreground: oklch(0.88 0.08 295);
+
+	--muted: oklch(0.27 0.02 280);
+	--muted-foreground: oklch(0.68 0.015 295);
+
+	--accent: oklch(0.27 0.02 280);
+	--accent-foreground: oklch(0.88 0.08 295);
+
+	--destructive: oklch(0.45 0.15 25);
+	--destructive-foreground: oklch(0.95 0.005 295);
+
+	--border: oklch(0.31 0.02 280);
+	--input: oklch(0.31 0.02 280);
+	--ring: oklch(0.88 0.08 295 / 0.3);
+
+	/* Sidebar (Dark Violet) */
+	--sidebar: oklch(0.20 0.015 280);
+	--sidebar-foreground: oklch(0.95 0.005 295);
+	--sidebar-primary: oklch(0.88 0.08 295);
+	--sidebar-primary-foreground: oklch(0.17 0.015 280);
+	--sidebar-accent: oklch(0.27 0.02 280);
+	--sidebar-accent-foreground: oklch(0.95 0.005 295);
+	--sidebar-border: oklch(0.31 0.02 280);
+
+	/* Banners (Dark) */
+	--banner-info: oklch(0.22 0.04 260);
+	--banner-info-foreground: oklch(0.88 0.05 260);
+	--banner-info-border: oklch(0.48 0.16 260);
+	--banner-note: oklch(0.22 0.05 295);
+	--banner-note-foreground: oklch(0.88 0.06 295);
+	--banner-note-border: oklch(0.5 0.12 295);
+	--banner-warning: oklch(0.26 0.06 70);
+	--banner-warning-foreground: oklch(0.92 0.1 80);
+	--banner-warning-border: oklch(0.65 0.2 75);
+	--banner-alert: oklch(0.23 0.05 25);
+	--banner-alert-foreground: oklch(0.9 0.06 25);
+	--banner-alert-border: oklch(0.44 0.14 25);
+
+	/* Interactive Elements (Dark) */
+	--badge-success: oklch(0.48 0.15 150);
+	--badge-success-foreground: oklch(1 0 0);
+	--checkbox-checked: oklch(0.88 0.08 295);
+	--checkbox-checked-foreground: oklch(0.17 0.015 280);
+	--checkbox-unchecked-bg: oklch(0.24 0.01 280);
+	--checkbox-unchecked-border: oklch(0.38 0.01 280);
+}
