@@ -120,6 +120,10 @@
 	@apply z-50 fixed w-full h-14 top-0 px-3 flex justify-between text-card-foreground bg-card border-container items-center;
 }
 
+.app-title {
+	@apply text-xl font-bold tracking-tight ml-2;
+}
+
 .sub-heading {
 	@apply mt-8 mb-1 font-semibold text-foreground;
 }
