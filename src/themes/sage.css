@@ -47,7 +47,7 @@
 	--ring: oklch(0.25 0.06 145 / 0.15);
 
 	/* Sidebar (Soft Sage) */
-	--sidebar: oklch(0.97 0.006 145);
+	--sidebar: oklch(0.99 0.004 145);
 	--sidebar-foreground: oklch(0.22 0.02 145);
 	--sidebar-primary: oklch(0.25 0.06 145);
 	--sidebar-primary-foreground: oklch(0.97 0.005 145);
@@ -126,7 +126,7 @@
 	--ring: oklch(0.8 0.1 145 / 0.3);
 
 	/* Sidebar (Dark Forest) */
-	--sidebar: oklch(0.17 0.015 145);
+	--sidebar: oklch(0.19 0.018 145);
 	--sidebar-foreground: oklch(0.93 0.01 145);
 	--sidebar-primary: oklch(0.8 0.1 145);
 	--sidebar-primary-foreground: oklch(0.14 0.015 145);

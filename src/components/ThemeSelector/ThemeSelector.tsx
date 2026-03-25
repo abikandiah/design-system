@@ -8,6 +8,7 @@ const COLOR_THEMES: { value: ColorTheme; label: string }[] = [
 	{ value: 'steel', label: 'Steel' },
 	{ value: 'sage', label: 'Sage' },
 	{ value: 'dusk', label: 'Dusk' },
+	{ value: 'canopy', label: 'Canopy' },
 ]
 
 export function ThemeSelector({ onChange, ...props }: React.ComponentProps<typeof Select>) {

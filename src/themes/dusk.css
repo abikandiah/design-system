@@ -47,7 +47,7 @@
 	--ring: oklch(0.3 0.06 295 / 0.15);
 
 	/* Sidebar (Soft Lavender) */
-	--sidebar: oklch(0.97 0.005 295);
+	--sidebar: oklch(0.99 0.004 295);
 	--sidebar-foreground: oklch(0.25 0.02 295);
 	--sidebar-primary: oklch(0.3 0.06 295);
 	--sidebar-primary-foreground: oklch(0.98 0.005 295);
@@ -126,7 +126,7 @@
 	--ring: oklch(0.88 0.1 305 / 0.3);
 
 	/* Sidebar (Amethyst) */
-	--sidebar: oklch(0.20 0.02 305);
+	--sidebar: oklch(0.22 0.025 305);
 	--sidebar-foreground: oklch(0.95 0.005 310);
 	--sidebar-primary: oklch(0.88 0.1 305);
 	--sidebar-primary-foreground: oklch(0.17 0.02 305);

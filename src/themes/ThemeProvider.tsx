@@ -5,9 +5,10 @@ import './linen.css'
 import './steel.css'
 import './sage.css'
 import './dusk.css'
+import './canopy.css'
 
 export type Theme = 'light' | 'dark' | 'system'
-export type ColorTheme = 'linen' | 'steel' | 'sage' | 'dusk'
+export type ColorTheme = 'linen' | 'steel' | 'sage' | 'dusk' | 'canopy'
 
 const STORAGE_KEY = 'theme'
 const COLOR_THEME_STORAGE_KEY = 'color-theme'
@@ -23,7 +24,7 @@ function getStoredTheme(): Theme {
 function getStoredColorTheme(defaultColorTheme: ColorTheme): ColorTheme {
 	if (typeof window === 'undefined') return defaultColorTheme
 	const stored = localStorage.getItem(COLOR_THEME_STORAGE_KEY)
-	if (stored === 'linen' || stored === 'steel' || stored === 'sage' || stored === 'dusk') return stored
+	if (stored === 'linen' || stored === 'steel' || stored === 'sage' || stored === 'dusk' || stored === 'canopy') return stored
 	return defaultColorTheme
 }
 

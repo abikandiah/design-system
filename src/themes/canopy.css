@@ -1,0 +1,157 @@
+[data-theme="canopy"] {
+	/* --- Light Theme (Professional Navy & Sky — Product Dashboard) --- */
+	--background: oklch(0.97 0.008 210);
+	--foreground: oklch(0.16 0.035 225);
+
+	/* Brand palette */
+	--color-canopy: #0f172a;
+	--color-hive: #0ea5e9;
+	--color-parchment: #f1f5f9;
+
+	/* Chart palette */
+	--chart-1: oklch(0.65 0.18 142);
+	--chart-2: oklch(0.72 0.17 72);
+	--chart-3: oklch(0.69 0.19 38);
+	--chart-4: oklch(0.55 0.2 25);
+	--chart-5: oklch(0.57 0.22 264);
+	--chart-6: oklch(0.55 0.22 290);
+	--chart-7: oklch(0.62 0.2 314);
+	--chart-8: oklch(0.62 0.2 340);
+
+	/* Surfaces */
+	--card: oklch(1 0 0 / 0.85);
+	--card-foreground: oklch(0.16 0.035 225);
+
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.16 0.035 225);
+
+	/* Primary: Sky Blue */
+	--primary: oklch(0.62 0.18 210);
+	--primary-foreground: oklch(1 0 0);
+
+	--secondary: oklch(0.93 0.01 210);
+	--secondary-foreground: oklch(0.62 0.18 210);
+
+	--muted: oklch(0.93 0.01 210);
+	--muted-foreground: oklch(0.5 0.02 210);
+
+	--accent: oklch(0.93 0.01 210);
+	--accent-foreground: oklch(0.62 0.18 210);
+
+	--destructive: oklch(0.55 0.19 15);
+	--destructive-foreground: oklch(1 0 0);
+
+	--border: oklch(0.88 0.008 210);
+	--input: oklch(0.88 0.008 210);
+	--ring: oklch(0.62 0.18 210 / 0.3);
+
+	/* Sidebar (Elevated cool surface) */
+	--sidebar: oklch(1 0 0);
+	--sidebar-foreground: oklch(0.16 0.035 225);
+	--sidebar-primary: oklch(0.62 0.18 210);
+	--sidebar-primary-foreground: oklch(1 0 0);
+	--sidebar-accent: oklch(0.93 0.01 210);
+	--sidebar-accent-foreground: oklch(0.16 0.035 225);
+	--sidebar-border: oklch(0.88 0.008 210);
+
+	/* Banners */
+	--banner-info: oklch(0.94 0.02 210);
+	--banner-info-foreground: oklch(0.24 0.09 210);
+	--banner-info-border: oklch(0.52 0.18 210);
+	--banner-note: oklch(0.94 0.02 162);
+	--banner-note-foreground: oklch(0.24 0.1 162);
+	--banner-note-border: oklch(0.48 0.16 162);
+	--banner-warning: oklch(0.95 0.04 78);
+	--banner-warning-foreground: oklch(0.34 0.13 62);
+	--banner-warning-border: oklch(0.62 0.18 72);
+	--banner-alert: oklch(0.95 0.03 22);
+	--banner-alert-foreground: oklch(0.34 0.14 22);
+	--banner-alert-border: oklch(0.52 0.2 22);
+
+	/* Interactive Elements */
+	--badge-success: oklch(0.35 0.1 160);
+	--badge-success-foreground: oklch(0.98 0.01 160);
+	--checkbox-checked: oklch(0.62 0.18 210);
+	--checkbox-checked-foreground: oklch(1 0 0);
+	--checkbox-unchecked-bg: oklch(1 0 0);
+	--checkbox-unchecked-border: oklch(0.85 0.01 210);
+}
+
+[data-theme="canopy"].dark {
+	/* --- Dark Theme (Deep Slate & Sky Glow) --- */
+	--background: oklch(0.14 0.03 240);
+	--foreground: oklch(0.95 0.005 210);
+
+	/* Brand palette — dark */
+	--color-canopy: #020617;
+	--color-hive: #38bdf8;
+	--color-parchment: #0f172a;
+
+	/* Chart palette — dark */
+	--chart-1: oklch(0.72 0.2 142);
+	--chart-2: oklch(0.78 0.18 72);
+	--chart-3: oklch(0.75 0.2 38);
+	--chart-4: oklch(0.65 0.22 25);
+	--chart-5: oklch(0.65 0.22 264);
+	--chart-6: oklch(0.63 0.22 290);
+	--chart-7: oklch(0.7 0.2 314);
+	--chart-8: oklch(0.7 0.2 340);
+
+	/* Card Elevation */
+	--card: oklch(0.19 0.035 235 / 0.75);
+	--card-foreground: oklch(0.95 0.005 210);
+
+	--popover: oklch(0.17 0.03 240);
+	--popover-foreground: oklch(0.95 0.005 210);
+
+	/* Primary: Bright Sky Glow */
+	--primary: oklch(0.72 0.18 210);
+	--primary-foreground: oklch(0.14 0.03 240);
+
+	--secondary: oklch(0.24 0.035 235);
+	--secondary-foreground: oklch(0.72 0.18 210);
+
+	--muted: oklch(0.24 0.035 235);
+	--muted-foreground: oklch(0.65 0.015 210);
+
+	--accent: oklch(0.24 0.035 235);
+	--accent-foreground: oklch(0.72 0.18 210);
+
+	--destructive: oklch(0.45 0.15 25);
+	--destructive-foreground: oklch(0.95 0.005 210);
+
+	--border: oklch(0.28 0.035 235);
+	--input: oklch(0.28 0.035 235);
+	--ring: oklch(0.72 0.18 210 / 0.3);
+
+	/* Sidebar (Deep Slate) */
+	--sidebar: oklch(0.19 0.035 235);
+	--sidebar-foreground: oklch(0.95 0.005 210);
+	--sidebar-primary: oklch(0.72 0.18 210);
+	--sidebar-primary-foreground: oklch(0.14 0.03 240);
+	--sidebar-accent: oklch(0.24 0.035 235);
+	--sidebar-accent-foreground: oklch(0.95 0.005 210);
+	--sidebar-border: oklch(0.28 0.035 235);
+
+	/* Banners (Dark) */
+	--banner-info: oklch(0.22 0.04 220);
+	--banner-info-foreground: oklch(0.88 0.05 220);
+	--banner-info-border: oklch(0.48 0.16 220);
+	--banner-note: oklch(0.22 0.05 155);
+	--banner-note-foreground: oklch(0.88 0.06 155);
+	--banner-note-border: oklch(0.5 0.12 155);
+	--banner-warning: oklch(0.26 0.06 70);
+	--banner-warning-foreground: oklch(0.92 0.1 80);
+	--banner-warning-border: oklch(0.65 0.2 75);
+	--banner-alert: oklch(0.23 0.05 25);
+	--banner-alert-foreground: oklch(0.9 0.06 25);
+	--banner-alert-border: oklch(0.44 0.14 25);
+
+	/* Interactive Elements (Dark) */
+	--badge-success: oklch(0.48 0.15 150);
+	--badge-success-foreground: oklch(1 0 0);
+	--checkbox-checked: oklch(0.72 0.18 210);
+	--checkbox-checked-foreground: oklch(0.14 0.03 240);
+	--checkbox-unchecked-bg: oklch(0.22 0.01 235);
+	--checkbox-unchecked-border: oklch(0.38 0.01 235);
+}
