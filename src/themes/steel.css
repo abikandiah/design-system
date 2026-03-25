@@ -79,8 +79,8 @@
 }
 
 [data-theme="steel"].dark {
-	/* --- Dark Theme (Modern Slate & Glow) --- */
-	--background: oklch(0.18 0.015 260);
+	/* --- Dark Theme (Midnight Navy & Cyan) --- */
+	--background: oklch(0.18 0.02 225);
 	--foreground: oklch(0.985 0 0);
 
 	/* Brand palette — dark */
@@ -99,40 +99,40 @@
 	--chart-8: oklch(0.7 0.2 340);
 
 	/* Card Elevation: Brighter than background */
-	--card: oklch(0.23 0.02 260 / 0.75);
+	--card: oklch(0.23 0.025 225 / 0.75);
 	--card-foreground: oklch(0.985 0 0);
 
-	--popover: oklch(0.21 0.015 260);
+	--popover: oklch(0.21 0.02 225);
 	--popover-foreground: oklch(0.985 0 0);
 
 	/* Primary: Electric Cyan Glow */
 	--primary: oklch(0.9 0.1 220);
-	--primary-foreground: oklch(0.18 0.015 260);
+	--primary-foreground: oklch(0.18 0.02 225);
 
-	--secondary: oklch(0.28 0.02 260);
+	--secondary: oklch(0.28 0.025 225);
 	--secondary-foreground: oklch(0.9 0.1 220);
 
-	--muted: oklch(0.28 0.02 260);
-	--muted-foreground: oklch(0.705 0.015 260);
+	--muted: oklch(0.28 0.025 225);
+	--muted-foreground: oklch(0.705 0.015 225);
 
-	--accent: oklch(0.28 0.02 260);
+	--accent: oklch(0.28 0.025 225);
 	--accent-foreground: oklch(0.9 0.1 220);
 
 	--destructive: oklch(0.45 0.15 25);
 	--destructive-foreground: oklch(0.985 0 0);
 
-	--border: oklch(0.32 0.02 260);
-	--input: oklch(0.32 0.02 260);
+	--border: oklch(0.32 0.025 225);
+	--input: oklch(0.32 0.025 225);
 	--ring: oklch(0.9 0.1 220 / 0.3);
 
-	/* Sidebar (Dark) */
-	--sidebar: oklch(0.21 0.015 260);
+	/* Sidebar (Midnight Navy) */
+	--sidebar: oklch(0.21 0.02 225);
 	--sidebar-foreground: oklch(0.985 0 0);
 	--sidebar-primary: oklch(0.9 0.1 220);
-	--sidebar-primary-foreground: oklch(0.18 0.015 260);
-	--sidebar-accent: oklch(0.28 0.02 260);
+	--sidebar-primary-foreground: oklch(0.18 0.02 225);
+	--sidebar-accent: oklch(0.28 0.025 225);
 	--sidebar-accent-foreground: oklch(0.985 0 0);
-	--sidebar-border: oklch(0.32 0.02 260);
+	--sidebar-border: oklch(0.32 0.025 225);
 
 	/* Banners (Dark - Desaturated) */
 	--banner-info: oklch(0.274 0.079 260);

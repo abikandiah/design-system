@@ -25,34 +25,34 @@
 	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.2 0.01 85);
 
-	/* Primary: Deep Warm Charcoal (Neutral & High Contrast) */
-	--primary: oklch(0.18 0.01 85);
+	/* Primary: Warm Amber */
+	--primary: oklch(0.58 0.18 70);
 	--primary-foreground: oklch(1 0 0);
 
 	/* Button/Surface Colors: Pure White */
 	--secondary: oklch(1 0 0);
-	--secondary-foreground: oklch(0.18 0.01 85);
+	--secondary-foreground: oklch(0.58 0.18 70);
 
 	--muted: oklch(1 0 0);
 	--muted-foreground: oklch(0.5 0.01 85);
 
-	--accent: oklch(1 0 0);
-	--accent-foreground: oklch(0.18 0.01 85);
+	--accent: oklch(0.97 0.01 85);
+	--accent-foreground: oklch(0.58 0.18 70);
 
-	--destructive: oklch(0.55 0.15 25);
+	--destructive: oklch(0.55 0.19 15);
 	--destructive-foreground: oklch(1 0 0);
 
 	--border: oklch(0.94 0.005 85);
 	--input: oklch(0.94 0.005 85);
-	--ring: oklch(0.18 0.01 85 / 0.1);
+	--ring: oklch(0.58 0.18 70 / 0.3);
 
 	/* Sidebar (Soft White) */
 	--sidebar: oklch(0.995 0.002 85);
 	--sidebar-foreground: oklch(0.2 0.01 85);
-	--sidebar-primary: oklch(0.18 0.01 85);
+	--sidebar-primary: oklch(0.58 0.18 70);
 	--sidebar-primary-foreground: oklch(1 0 0);
-	--sidebar-accent: oklch(0.97 0.01 85);
-	--sidebar-accent-foreground: oklch(0.18 0.01 85);
+	--sidebar-accent: oklch(0.96 0.015 75);
+	--sidebar-accent-foreground: oklch(0.35 0.1 70);
 	--sidebar-border: oklch(0.95 0.005 85);
 
 	/* Banners */
@@ -72,7 +72,7 @@
 	/* Interactive Elements */
 	--badge-success: oklch(0.4 0.1 160);
 	--badge-success-foreground: oklch(1 0 0);
-	--checkbox-checked: oklch(0.15 0.01 60);
+	--checkbox-checked: oklch(0.58 0.18 70);
 	--checkbox-checked-foreground: oklch(1 0 0);
 	--checkbox-unchecked-bg: oklch(1 0 0);
 	--checkbox-unchecked-border: oklch(0.88 0.01 60);
@@ -105,34 +105,34 @@
 	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.2 0.01 85);
 
-	/* Primary: Deep Warm Charcoal (Neutral & High Contrast) */
-	--primary: oklch(0.18 0.01 85);
+	/* Primary: Warm Amber */
+	--primary: oklch(0.58 0.18 70);
 	--primary-foreground: oklch(1 0 0);
 
 	/* Button/Surface Colors: Pure White */
 	--secondary: oklch(1 0 0);
-	--secondary-foreground: oklch(0.18 0.01 85);
+	--secondary-foreground: oklch(0.58 0.18 70);
 
 	--muted: oklch(1 0 0);
 	--muted-foreground: oklch(0.5 0.01 85);
 
-	--accent: oklch(1 0 0);
-	--accent-foreground: oklch(0.18 0.01 85);
+	--accent: oklch(0.97 0.01 85);
+	--accent-foreground: oklch(0.58 0.18 70);
 
-	--destructive: oklch(0.55 0.15 25);
+	--destructive: oklch(0.55 0.19 15);
 	--destructive-foreground: oklch(1 0 0);
 
 	--border: oklch(0.94 0.005 85);
 	--input: oklch(0.94 0.005 85);
-	--ring: oklch(0.18 0.01 85 / 0.1);
+	--ring: oklch(0.58 0.18 70 / 0.3);
 
 	/* Sidebar (Soft White) */
 	--sidebar: oklch(0.995 0.002 85);
 	--sidebar-foreground: oklch(0.2 0.01 85);
-	--sidebar-primary: oklch(0.18 0.01 85);
+	--sidebar-primary: oklch(0.58 0.18 70);
 	--sidebar-primary-foreground: oklch(1 0 0);
-	--sidebar-accent: oklch(0.97 0.01 85);
-	--sidebar-accent-foreground: oklch(0.18 0.01 85);
+	--sidebar-accent: oklch(0.96 0.015 75);
+	--sidebar-accent-foreground: oklch(0.35 0.1 70);
 	--sidebar-border: oklch(0.95 0.005 85);
 
 	/* Banners */
@@ -152,7 +152,7 @@
 	/* Interactive Elements */
 	--badge-success: oklch(0.4 0.1 160);
 	--badge-success-foreground: oklch(1 0 0);
-	--checkbox-checked: oklch(0.15 0.01 60);
+	--checkbox-checked: oklch(0.58 0.18 70);
 	--checkbox-checked-foreground: oklch(1 0 0);
 	--checkbox-unchecked-bg: oklch(1 0 0);
 	--checkbox-unchecked-border: oklch(0.88 0.01 60);
