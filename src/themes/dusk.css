@@ -1,7 +1,22 @@
 [data-theme="dusk"] {
 	/* --- Light Theme (Creative, Sophisticated - Pale Lavender) --- */
-	--background: oklch(0.965 0.006 295);
+	--background: oklch(0.965 0.015 295);
 	--foreground: oklch(0.2 0.02 295);
+
+	/* Brand palette */
+	--color-canopy: oklch(0.16 0.04 285);
+	--color-hive: oklch(0.62 0.2 285);
+	--color-parchment: oklch(0.975 0.006 285);
+
+	/* Chart palette */
+	--chart-1: oklch(0.65 0.18 142);
+	--chart-2: oklch(0.72 0.17 72);
+	--chart-3: oklch(0.69 0.19 38);
+	--chart-4: oklch(0.55 0.2 25);
+	--chart-5: oklch(0.57 0.22 264);
+	--chart-6: oklch(0.55 0.22 290);
+	--chart-7: oklch(0.62 0.2 314);
+	--chart-8: oklch(0.62 0.2 340);
 
 	/* Surfaces */
 	--card: oklch(0.99 0.004 295 / 0.85);
@@ -67,6 +82,21 @@
 	/* --- Dark Theme (Deep Violet with Bright Lavender Glow) --- */
 	--background: oklch(0.17 0.015 280);
 	--foreground: oklch(0.95 0.005 295);
+
+	/* Brand palette — dark */
+	--color-canopy: oklch(0.09 0.02 285);
+	--color-hive: oklch(0.78 0.2 295);
+	--color-parchment: oklch(0.17 0.018 280);
+
+	/* Chart palette — dark */
+	--chart-1: oklch(0.72 0.2 142);
+	--chart-2: oklch(0.78 0.18 72);
+	--chart-3: oklch(0.75 0.2 38);
+	--chart-4: oklch(0.65 0.22 25);
+	--chart-5: oklch(0.65 0.22 264);
+	--chart-6: oklch(0.63 0.22 290);
+	--chart-7: oklch(0.7 0.2 314);
+	--chart-8: oklch(0.7 0.2 340);
 
 	/* Card Elevation */
 	--card: oklch(0.22 0.018 280 / 0.75);

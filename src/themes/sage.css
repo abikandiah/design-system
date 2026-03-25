@@ -1,7 +1,22 @@
 [data-theme="sage"] {
 	/* --- Light Theme (Natural, Organic - Pale Sage) --- */
-	--background: oklch(0.965 0.007 145);
+	--background: oklch(0.965 0.015 145);
 	--foreground: oklch(0.18 0.02 145);
+
+	/* Brand palette */
+	--color-canopy: oklch(0.16 0.04 145);
+	--color-hive: oklch(0.62 0.2 145);
+	--color-parchment: oklch(0.975 0.008 145);
+
+	/* Chart palette */
+	--chart-1: oklch(0.65 0.18 142);
+	--chart-2: oklch(0.72 0.17 72);
+	--chart-3: oklch(0.69 0.19 38);
+	--chart-4: oklch(0.55 0.2 25);
+	--chart-5: oklch(0.57 0.22 264);
+	--chart-6: oklch(0.55 0.22 290);
+	--chart-7: oklch(0.62 0.2 314);
+	--chart-8: oklch(0.62 0.2 340);
 
 	/* Surfaces - Frosted with green tint */
 	--card: oklch(0.99 0.004 145 / 0.75);
@@ -67,6 +82,21 @@
 	/* --- Dark Theme (Deep Forest with Moss Glow) --- */
 	--background: oklch(0.14 0.015 145);
 	--foreground: oklch(0.93 0.01 145);
+
+	/* Brand palette — dark */
+	--color-canopy: oklch(0.09 0.02 145);
+	--color-hive: oklch(0.75 0.2 145);
+	--color-parchment: oklch(0.17 0.018 145);
+
+	/* Chart palette — dark */
+	--chart-1: oklch(0.72 0.2 142);
+	--chart-2: oklch(0.78 0.18 72);
+	--chart-3: oklch(0.75 0.2 38);
+	--chart-4: oklch(0.65 0.22 25);
+	--chart-5: oklch(0.65 0.22 264);
+	--chart-6: oklch(0.63 0.22 290);
+	--chart-7: oklch(0.7 0.2 314);
+	--chart-8: oklch(0.7 0.2 340);
 
 	/* Card Elevation */
 	--card: oklch(0.19 0.018 145 / 0.75);

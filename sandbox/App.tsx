@@ -3,6 +3,7 @@ import { ThemeSelector } from '@/components/ThemeSelector'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { ThemeProvider } from '@/themes'
 import { useState } from 'react'
+import { BrandingPage } from './pages/BrandingPage'
 import { FeedbackPage } from './pages/FeedbackPage'
 import { FormsPage } from './pages/FormsPage'
 import { FoundationPage } from './pages/FoundationPage'
@@ -10,7 +11,14 @@ import { LayoutPage } from './pages/LayoutPage'
 import { OverlaysPage } from './pages/OverlaysPage'
 import { SidebarPage } from './pages/SidebarPage'
 
-type Page = 'foundation' | 'forms' | 'feedback' | 'overlays' | 'layout' | 'sidebar'
+type Page =
+	| 'foundation'
+	| 'forms'
+	| 'feedback'
+	| 'overlays'
+	| 'layout'
+	| 'sidebar'
+	| 'branding'
 
 const pages: { id: Page; label: string }[] = [
 	{ id: 'foundation', label: 'Foundation' },
@@ -19,6 +27,7 @@ const pages: { id: Page; label: string }[] = [
 	{ id: 'overlays', label: 'Overlays' },
 	{ id: 'layout', label: 'Layout' },
 	{ id: 'sidebar', label: 'Sidebar' },
+	{ id: 'branding', label: 'Branding' },
 ]
 
 function Sandbox() {
@@ -30,7 +39,9 @@ function Sandbox() {
 		<div className="min-h-screen bg-background text-foreground">
 			<header className="header">
 				<BeeLogo href="#" />
-				<span className="app-title hidden text-foreground sm:inline">Sandbox</span>
+				<span className="app-title hidden text-foreground sm:inline">
+					Sandbox
+				</span>
 
 				<nav className="flex items-center gap-1 ml-4">
 					{pages.map((p) => (
@@ -50,8 +61,8 @@ function Sandbox() {
 				</nav>
 
 				<div className="ml-auto flex items-center gap-2">
-					<ThemeSelector />
 					<ThemeToggle />
+					<ThemeSelector />
 				</div>
 			</header>
 
@@ -66,6 +77,7 @@ function Sandbox() {
 					{page === 'feedback' && <FeedbackPage />}
 					{page === 'overlays' && <OverlaysPage />}
 					{page === 'layout' && <LayoutPage />}
+				{page === 'branding' && <BrandingPage />}
 				</main>
 			)}
 		</div>
