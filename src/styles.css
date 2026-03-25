@@ -4,6 +4,7 @@
 @import './themes/steel.css';
 @import './themes/sage.css';
 @import './themes/dusk.css';
+@import './themes/canopy.css';
 
 @tailwind base;
 @tailwind components;

@@ -41,7 +41,10 @@
 			"types": "./dist/themes/index.d.ts"
 		},
 		"./themes/linen.css": "./src/themes/linen.css",
-		"./themes/steel.css": "./src/themes/steel.css"
+		"./themes/steel.css": "./src/themes/steel.css",
+		"./themes/sage.css": "./src/themes/sage.css",
+		"./themes/dusk.css": "./src/themes/dusk.css",
+		"./themes/canopy.css": "./src/themes/canopy.css"
 	},
 	"scripts": {
 		"version": "npm run build",
