@@ -7,7 +7,7 @@ const ulVariants = cva(
     {
         variants: {
             variant: {
-                default: "bg-card border-container py-2",
+                default: "bg-transparent border-container py-2",
                 clear: ""
             },
         },
@@ -31,7 +31,7 @@ const olVariants = cva(
     {
         variants: {
             variant: {
-                default: "bg-card border-container py-2",
+                default: "bg-transparent border-container py-2",
                 clear: ""
             },
         },

@@ -22,6 +22,7 @@ import {
 	TableHeader,
 	TableRow,
 } from '@/components/Table'
+import { InnerUnorderedList, OrderedList, UnorderedList } from '@/components/List'
 import { ChevronDown } from 'lucide-react'
 
 function Section({
@@ -202,6 +203,42 @@ export function LayoutPage() {
 							))}
 						</TableBody>
 					</Table>
+				</div>
+			</Section>
+
+			<Section title="Lists">
+				<div className="flex gap-8 flex-wrap">
+					<UnorderedList>
+						<li>Design tokens</li>
+						<li>Component library</li>
+						<li>
+							Documentation
+							<InnerUnorderedList>
+								<li>Getting started</li>
+								<li>API reference</li>
+							</InnerUnorderedList>
+						</li>
+						<li>Changelog</li>
+					</UnorderedList>
+
+					<OrderedList>
+						<li>Install the package</li>
+						<li>Configure your theme</li>
+						<li>
+							Import components
+							<InnerUnorderedList>
+								<li>Named imports</li>
+								<li>Tree-shaking support</li>
+							</InnerUnorderedList>
+						</li>
+						<li>Ship it</li>
+					</OrderedList>
+
+					<UnorderedList variant="clear">
+						<li>No background</li>
+						<li>Clear variant</li>
+						<li>Minimal styling</li>
+					</UnorderedList>
 				</div>
 			</Section>
 
